@@ -1,0 +1,21 @@
+season,player_name,team,mvp_share,rank
+2025-26,Shai Gilgeous-Alexander,OKC,0.939,1
+2025-26,Nikola Jokić,DEN,0.634,2
+2025-26,Victor Wembanyama,SAS,0.569,3
+2025-26,Luka Dončić,LAL,0.25,4
+2025-26,Cade Cunningham,DET,0.117,5
+2025-26,Jaylen Brown,BOS,0.089,6
+2025-26,Kawhi Leonard,LAC,0.001,7T
+2025-26,Donovan Mitchell,CLE,0.001,7T
+2024-25,Shai Gilgeous-Alexander,OKC,0.913,1
+2024-25,Nikola Jokić,DEN,0.787,2
+2024-25,Giannis Antetokounmpo, MIL,0.47,3
+2024-25,Jayson Tatum,BOS,0.311,4
+2024-25,Donovan Mitchell,CLE,0.074,5
+2024-25,LeBron James,LAL,0.016,6
+2024-25,Cade Cunningham,DET,0.012,7T
+2024-25,Anthony Edwards,MIN,0.012,7T
+2024-25,Stephen Curry,GSW,0.002,9
+2024-25,Jalen Brunson,NYK,0.001,10T
+2024-25,James Harden,LAC,0.001,10T
+2024-25,Evan Mobley,CLE,0.001,10T
