@@ -1,0 +1,4 @@
+model_name,accuracy,auc_roc,is_production,brier_score
+Logistic Regression,0.6698523023457863,0.7324458541320545,True,0.2079
+Random Forest,0.6642050390964379,0.7250847485773335,False,0.2115
+XGBoost,0.6259774109470027,0.6730539152672741,False,0.229

@@ -1,0 +1,16 @@
+stage,round_order,team_a,team_b,wins_a,wins_b,winner,series_score
+Eastern Conf First Round,1,NYK,BOS,4,0,NYK,4-0
+Eastern Conf First Round,1,ORL,MIA,3,4,MIA,4-3
+Eastern Conf First Round,1,CLE,TOR,4,2,CLE,4-2
+Eastern Conf First Round,1,PHI,IND,4,0,PHI,4-0
+Western Conf First Round,1,DEN,LAL,4,1,DEN,4-1
+Western Conf First Round,1,SAS,MIN,4,2,SAS,4-2
+Western Conf First Round,1,OKC,UTA,4,1,OKC,4-1
+Western Conf First Round,1,HOU,POR,4,2,HOU,4-2
+Eastern Conf Semifinals,2,NYK,MIA,4,3,NYK,4-3
+Eastern Conf Semifinals,2,CLE,PHI,3,4,PHI,4-3
+Western Conf Semifinals,2,DEN,SAS,2,4,SAS,4-2
+Western Conf Semifinals,2,OKC,HOU,3,4,HOU,4-3
+Eastern Conf Finals,3,NYK,PHI,4,1,NYK,4-1
+Western Conf Finals,3,SAS,HOU,4,3,SAS,4-3
+NBA Finals,4,NYK,SAS,4,0,NYK,4-0

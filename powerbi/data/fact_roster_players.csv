@@ -1,0 +1,520 @@
+player_id,player_name,team_id,position,age,experience_years,how_acquired
+1629652,Luguentz Dort,ATL,G,27.0,7,Traded from OKC on 07/19/26
+1642484,RayJ Dennis,ATL,G,25.0,2,Signed on 12/31/25
+1642933,Keshon Gilbert,ATL,G,23.0,1,Signed on 03/04/26
+1630552,Jalen Johnson,ATL,F,24.0,5,#20 Pick in 2021 Draft
+1630598,Aaron Wiggins,ATL,G,27.0,5,Traded from OKC on 07/06/26
+203468,CJ McCollum,ATL,G,35.0,13,Traded from WAS on 01/09/26
+1643412,Kingston Flemings,ATL,G,19.0,R,#8 Pick in 2026 Draft
+1630700,Dyson Daniels,ATL,G,23.0,4,Traded from NOP on 07/06/24
+1629638,Nickeil Alexander-Walker,ATL,G,28.0,7,Traded from MIN on 07/06/25
+1627827,Dorian Finney-Smith,ATL,F,33.0,10,Traded from CHA on 09/22/26
+1643539,Henri Veesaar,ATL,C,22.0,R,Draft Rights Traded from LAC on 06/24/26
+1642854,Asa Newell,ATL,F,21.0,1,Draft Rights Traded from NOP on 06/25/25
+1630168,Onyeka Okongwu,ATL,F-C,25.0,6,#6 Pick in 2020 Draft
+1631243,Mouhamed Gueye,ATL,F,23.0,3,Draft Rights Traded from BOS on 06/28/23
+1643544,Zuby Ejiofor,ATL,F,22.0,R,#23 Pick in 2026 Draft
+1630592,Jalen Wilson,ATL,F,25.0,3,Signed on 07/22/26
+1630557,Corey Kispert,ATL,F,27.0,5,Traded from WAS on 01/09/26
+1629111,Jock Landale,ATL,C,30.0,5,Traded from UTA on 02/05/26
+1628369,Jayson Tatum,BOS,F-G,28.0,9,#3 Pick in 2017 Draft
+1629011,Mitchell Robinson,BOS,C-F,28.0,8,Signed on 07/06/26
+1631199,Ron Harper Jr.,BOS,G-F,26.0,4,Signed on 09/19/25
+1628401,Derrick White,BOS,G,32.0,9,Traded from SAS on 02/10/22
+1630202,Payton Pritchard,BOS,G,28.0,6,#26 Pick in 2020 Draft
+1643416,Chris Cenac Jr.,BOS,F,19.0,R,#27 Pick in 2026 Draft
+202331,Paul George,BOS,F,36.0,16,Traded from PHI on 07/06/26
+1641759,Dillon Mitchell,BOS,F,23.0,R,#40 Pick in 2026 Draft
+1642269,Devin Carter,BOS,G,24.0,2,Signed on 09/14/26
+1641775,Jordan Walsh,BOS,G,22.0,3,Draft Rights Traded from SAC on 06/28/23
+1642864,Hugo González,BOS,G,20.0,1,#28 Pick in 2025 Draft
+1630573,Sam Hauser,BOS,F,28.0,5,Signed on 08/13/21
+201144,Mike Conley,BOS,G,39.0,19,Signed on 07/06/26
+1630568,Luka Garza,BOS,C,27.0,5,Signed on 07/07/25
+1631248,Baylor Scheierman,BOS,G,26.0,2,#30 Pick in 2024 Draft
+1642873,Amari Williams,BOS,F-C,24.0,1,Draft Rights Traded from ORL on 06/26/25
+1629674,Neemias Queta,BOS,C,27.0,5,Signed on 09/19/23
+201935,James Harden,CLE,G,37.0,17,Traded from LAC on 02/04/26
+1628418,Thomas Bryant,CLE,C-F,29.0,9,Signed on 09/25/25
+1630596,Evan Mobley,CLE,C,25.0,5,#3 Pick in 2021 Draft
+1630241,Sam Merrill,CLE,G,30.0,6,Signed on 03/03/23
+1631212,Peyton Watson,CLE,G,24.0,4,Traded from DEN on 08/20/26
+1641854,Craig Porter Jr.,CLE,G,26.0,3,Signed on 07/03/23
+1642434,Riley Minix,CLE,F,26.0,2,Signed on 02/13/26
+1643509,Meleek Thomas,CLE,G,20.0,R,#34 Pick in 2026 Draft
+1631215,Khalifa Diop,CLE,C,24.0,R,#39 Pick in 2022 Draft
+1642281,Jaylon Tyson,CLE,G-F,23.0,2,#20 Pick in 2024 Draft
+1642400,Tristan Enaruna,CLE,F,25.0,1,Signed on 09/26/25
+1642878,Tyrese Proctor,CLE,G,22.0,1,#49 Pick in 2025 Draft
+1628386,Jarrett Allen,CLE,C,28.0,9,Traded from BKN on 01/16/21
+1626209,Mario Hezonja,CLE,F-G,31.0,5,Signed on 07/31/26
+1641772,Nae'Qwan Tomlin,CLE,F,25.0,2,Signed on 09/23/24
+1628378,Donovan Mitchell,CLE,G,30.0,9,Traded from UTA on 09/03/22
+1643640,"Ernest Udeh, Jr.",CLE,C,22.0,R,Signed on 07/01/26
+1642847,Jeremiah Fears,NOP,G,20.0,1,#7 Pick in 2025 Draft
+1629627,Zion Williamson,NOP,F,26.0,7,#1 Pick in 2019 Draft
+1630529,Herbert Jones,NOP,F,28.0,5,#35 Pick in 2021 Draft
+1629673,Jordan Poole,NOP,G,27.0,7,Traded from WAS on 07/06/25
+1627749,Dejounte Murray,NOP,G,30.0,10,Traded from ATL on 07/06/24
+201599,DeAndre Jordan,NOP,C,38.0,18,Signed on 10/23/25
+1643738,Malik Dia,NOP,F,22.0,R,Signed on 08/18/26
+1630570,Trendon Watford,NOP,G-F,25.0,5,Signed on 08/17/26
+1643555,Jaron Pierre Jr.,NOP,G,24.0,R,#58 Pick in 2026 Draft
+1631121,Bryce McGowens,NOP,G,23.0,4,Signed on 07/30/25
+1642882,Julian Reese,NOP,F,23.0,1,Signed on 09/24/26
+1642358,AJ Johnson,NOP,G,21.0,2,Traded from MEM on 09/08/26
+1631255,Karlo Matković,NOP,F-C,25.0,2,#52 Pick in 2022 Draft
+1642274,Yves Missi,NOP,C,22.0,2,#21 Pick in 2024 Draft
+1642852,Derik Queen,NOP,C,21.0,1,Draft Rights Traded from ATL on 06/25/25
+1631097,Bennedict Mathurin,NOP,G-F,24.0,4,Signed on 09/10/26
+1630530,Trey Murphy III,NOP,F,26.0,5,Draft Rights Traded from MEM on 08/07/21
+1630180,Saddiq Bey,NOP,F,27.0,6,Traded from WAS on 07/06/25
+1642855,Noa Essengue,CHI,F,19.0,1,#12 Pick in 2025 Draft
+1630581,Josh Giddey,CHI,G,24.0,5,Traded from OKC on 06/21/24
+1643517,Dailyn Swain,CHI,F,21.0,R,#15 Pick in 2026 Draft
+1627741,Buddy Hield,CHI,G,33.0,10,Traded from CHA on 09/27/26
+1643410,Caleb Wilson,CHI,F,20.0,R,#4 Pick in 2026 Draft
+1629651,Nic Claxton,CHI,C,27.0,7,Traded from BKN on 07/10/26
+1631159,Leonard Miller,CHI,F,22.0,3,Traded from MIN on 02/05/26
+1628380,Zach Collins,CHI,F-C,28.0,9,Traded from SAS on 02/03/25
+1641824,Matas Buzelis,CHI,F,22.0,2,#11 Pick in 2024 Draft
+1641722,Jordan Hawkins,CHI,G,24.0,3,Signed on 10/05/26
+1643591,Tobe Awaka,CHI,F,22.0,R,Signed on 07/03/26
+1643637,Jaylin Sellers,CHI,G,23.0,R,Signed on 07/03/26
+1626181,Norman Powell,CHI,G,33.0,11,Signed on 07/10/26
+1630188,Jalen Smith,CHI,F-C,26.0,6,Signed on 07/08/24
+1630200,Tre Jones,CHI,G,26.0,6,Traded from SAS on 02/03/25
+1630171,Isaac Okoro,CHI,F-G,25.0,6,Traded from CLE on 07/06/25
+1630172,Patrick Williams,CHI,F,25.0,6,#4 Pick in 2020 Draft
+1631108,Max Christie,DAL,G,23.0,4,Traded from LAL on 02/02/25
+1641726,Dereck Lively II,DAL,C,22.0,3,Draft Rights Traded from OKC on 07/06/23
+1630230,Naji Marshall,DAL,F,28.0,6,Signed on 07/06/24
+1642383,Walter Clayton Jr.,DAL,G,23.0,1,Signed on 10/21/26
+1631204,Marcus Sasser,DAL,G,26.0,3,Traded from DET on 07/08/26
+1641724,Jett Howard,DAL,G,23.0,3,Signed on 07/20/26
+1642258,Zaccharie Risacher,DAL,F,21.0,2,Traded from ATL on 07/19/26
+202681,Kyrie Irving,DAL,G,34.0,15,Traded from BKN on 02/06/23
+1641844,Tarik Biberović,DAL,F,25.0,R,Draft Rights Traded from MEM on 07/08/26
+1643516,Morez Johnson Jr.,DAL,F,20.0,R,#9 Pick in 2026 Draft
+1628997,Caleb Martin,DAL,F,31.0,7,Traded from PHI on 02/04/25
+1629655,Daniel Gafford,DAL,F-C,28.0,7,Traded from WAS on 02/08/24
+1629023,P.J. Washington,DAL,F,28.0,7,Traded from CHA on 02/08/24
+1630619,Moussa Cissé,DAL,C,24.0,1,Signed on 07/08/25
+1642843,Cooper Flagg,DAL,F,19.0,1,#1 Pick in 2025 Draft
+1643588,Tobi Lawal,DAL,F,23.0,R,#48 Pick in 2026 Draft
+1630583,Santi Aldama,DAL,F-C,25.0,5,Traded from MEM on 07/08/26
+1643547,Sergio de Larrea,DAL,G,20.0,R,Draft Rights Traded from LAL on 06/24/26
+1631128,Christian Braun,DEN,G,25.0,4,#21 Pick in 2022 Draft
+1641715,Cam Whitmore,DEN,F,22.0,3,Signed on 09/18/26
+1631124,Julian Strawther,DEN,G,24.0,3,Draft Rights Traded from IND on 06/23/23
+1628963,Marvin Bagley III,DEN,F,27.0,8,Signed on 07/15/26
+1626145,Tyus Jones,DEN,G,30.0,11,Signed on 03/05/26
+1642350,Trevon Brazile,DEN,F,23.0,R,#35 Pick in 2026 Draft
+1642948,Ryan Nembhard,DEN,G,23.0,1,Signed on 09/30/26
+201942,DeMar DeRozan,DEN,G-F,37.0,17,Signed on 09/08/26
+1643813,Alpha Diallo,DEN,G,29.0,R,Signed on 07/13/26
+1643624,Bryce Hopkins,DEN,F,24.0,R,#49 Pick in 2026 Draft
+1641747,DaRon Holmes II,DEN,F,24.0,1,Draft Rights Traded from PHX on 06/26/24
+203999,Nikola Jokić,DEN,C,31.0,11,#41 Pick in 2014 Draft
+1642461,Spencer Jones,DEN,F,25.0,2,Signed on 07/30/24
+1630192,Zeke Nnaji,DEN,F-C,25.0,6,#22 Pick in 2020 Draft
+1629661,Cameron Johnson,DEN,F,30.0,7,Traded from BKN on 07/08/25
+1627750,Jamal Murray,DEN,G,29.0,10,#7 Pick in 2016 Draft
+203932,Aaron Gordon,DEN,F,31.0,12,Traded from ORL on 03/25/21
+1627780,Gary Payton II,GSW,G,33.0,10,Traded from POR on 02/09/23
+1642865,Yaxel Lendeborg,GSW,F,24.0,R,#11 Pick in 2026 Draft
+1641764,Brandin Podziemski,GSW,G,23.0,3,#19 Pick in 2023 Draft
+1642954,Will Richard,GSW,G,23.0,1,Draft Rights Traded from MEM on 07/06/25
+1630541,Moses Moody,GSW,G,24.0,5,#14 Pick in 2021 Draft
+204001,Kristaps Porziņģis,GSW,F-C,31.0,11,Traded from ATL on 02/05/26
+1629001,De'Anthony Melton,GSW,G,28.0,8,Signed on 10/01/25
+202710,Jimmy Butler III,GSW,F,37.0,15,Traded from MIA on 02/06/25
+1630314,Brandon Williams,GSW,G,26.0,4,Signed on 08/26/26
+1630611,Gui Santos,GSW,F,24.0,3,#55 Pick in 2022 Draft
+1643018,LJ Cryer,GSW,G,25.0,1,Signed on 09/29/25
+201143,Al Horford,GSW,C,40.0,19,Signed on 10/01/25
+203110,Draymond Green,GSW,F-C,36.0,14,#35 Pick in 2012 Draft
+1629646,Charles Bassey,GSW,F-C,25.0,5,Signed on 04/05/26
+201939,Stephen Curry,GSW,G,38.0,17,#7 Pick in 2009 Draft
+1627777,Georges Niang,GSW,F,33.0,10,Signed on 08/25/26
+1642502,Malevy Leons,GSW,F,27.0,2,Signed on 12/08/25
+1643633,Graham Ike,GSW,F-C,24.0,R,Signed on 09/21/26
+1641708,Amen Thompson,HOU,G-F,23.0,3,#4 Pick in 2023 Draft
+1643570,Bruce Thornton,HOU,G,23.0,R,Draft Rights Traded from NYK on 06/24/26
+1641763,Julian Phillips,HOU,F,22.0,3,Signed on 07/24/26
+1627832,Fred VanVleet,HOU,G,32.0,10,Signed on 07/07/23
+201142,Kevin Durant,HOU,F,38.0,19,Traded from PHX on 07/06/25
+1630256,Jae'Sean Tate,HOU,F,30.0,6,Signed on 11/25/20
+1631095,Jabari Smith Jr.,HOU,F,23.0,4,#3 Pick in 2022 Draft
+203500,Steven Adams,HOU,C,33.0,13,Traded from MEM on 02/01/24
+1642263,Reed Sheppard,HOU,G,22.0,2,#3 Pick in 2024 Draft
+1631106,Tari Eason,HOU,F,25.0,4,#17 Pick in 2022 Draft
+1643595,Quadir Copeland,HOU,G,23.0,R,Signed on 07/07/26
+1642384,Isaiah Crawford,HOU,F,24.0,2,Signed on 07/26/25
+1630578,Alperen Sengun,HOU,C,24.0,5,Draft Rights Traded from OKC on 07/30/21
+203991,Clint Capela,HOU,C,32.0,12,Traded from ATL on 07/06/25
+203992,Bogdan Bogdanović,HOU,G,34.0,9,Signed on 07/08/26
+1631131,Oscar Tshiebwe,HOU,F-C,26.0,3,Signed on 07/23/26
+203935,Marcus Smart,HOU,G,32.0,12,Signed on 07/10/26
+1643413,Keaton Wagler,LAC,G,19.0,R,#5 Pick in 2026 Draft
+203078,Bradley Beal,LAC,G,33.0,14,Signed on 07/18/25
+1642920,Kobe Sanders,LAC,G,24.0,1,Draft Rights Traded from NYK on 06/26/25
+1627884,Derrick Jones Jr.,LAC,F,29.0,10,Signed on 07/09/24
+1627742,Brandon Ingram,LAC,F,29.0,10,Traded from TOR on 09/14/26
+1627739,Kris Dunn,LAC,G,32.0,10,Traded from UTA on 07/18/24
+1641711,Gradey Dick,LAC,G-F,22.0,3,Traded from TOR on 09/14/26
+1629636,Darius Garland,LAC,G,26.0,7,Traded from CLE on 02/04/26
+201572,Brook Lopez,LAC,C,38.0,18,Signed on 07/06/25
+1643568,Nick Martinelli,LAC,F,22.0,R,Draft Rights Traded from HOU on 06/24/26
+1642949,Yanic Konan Niederhäuser,LAC,C,23.0,1,#30 Pick in 2025 Draft
+1642394,Baba Miller,LAC,F,22.0,R,#36 Pick in 2026 Draft
+1641757,Jordan Miller,LAC,G,26.0,3,#48 Pick in 2023 Draft
+1630543,Isaiah Jackson,LAC,F,24.0,5,Traded from IND on 02/05/26
+1642353,Cam Christie,LAC,G,21.0,2,#46 Pick in 2024 Draft
+1629618,Jalen Pickett,LAC,G,27.0,3,Signed on 08/12/26
+1629060,Rui Hachimura,LAC,F,28.0,7,Signed on 07/06/26
+1629622,Max Strus,LAC,G-F,30.0,7,Traded from CLE on 08/20/26
+1642876,Adou Thiero,LAL,G,22.0,1,Draft Rights Traded from BKN on 07/06/25
+1629020,Jarred Vanderbilt,LAL,F,27.0,8,Traded from UTA on 02/09/23
+1629680,Matisse Thybulle,LAL,G-F,29.0,7,Signed on 07/27/26
+1629656,Quentin Grimes,LAL,G,26.0,5,Signed on 07/07/26
+1630702,Jaden Hardy,LAL,G,24.0,4,Traded from WAS on 07/07/26
+1642355,Bronny James,LAL,G,22.0,2,#55 Pick in 2024 Draft
+1629012,Collin Sexton,LAL,G,27.0,8,Signed on 07/11/26
+1630533,Ziaire Williams,LAL,F,25.0,5,Signed on 07/19/26
+1631222,Jake LaRavia,LAL,F,24.0,4,Signed on 07/06/25
+1631117,Walker Kessler,LAL,C,25.0,4,Traded from UTA on 07/08/26
+1630559,Austin Reaves,LAL,G,28.0,5,Signed on 08/03/21
+1643024,Chris Mañon,LAL,G,24.0,1,Signed on 07/24/25
+1643758,AK Okereke,LAL,F,23.0,R,Signed on 07/03/26
+1643418,Cameron Carr,LAL,G,21.0,R,Draft Rights Traded from NYK on 06/24/26
+1641751,Arthur Kaluma,LAL,F,24.0,R,Signed on 07/25/25
+1630572,Sandro Mamukelashvili,LAL,F-C,27.0,5,Signed on 07/07/26
+1626172,Kevon Looney,LAL,F,30.0,11,Signed on 07/12/26
+1629029,Luka Dončić,LAL,F-G,27.0,8,Traded from DAL on 02/02/25
+1631323,Simone Fontecchio,MIA,F,30.0,4,Traded from DET on 07/07/25
+1630558,Davion Mitchell,MIA,G,28.0,5,Traded from TOR on 02/06/25
+1643553,Ryan Conwell,MIA,G,22.0,R,Draft Rights Traded from OKC on 06/24/26
+1631107,Nikola Jović,MIA,F,23.0,4,#27 Pick in 2022 Draft
+203507,Giannis Antetokounmpo,MIA,F,31.0,13,Traded from MIL on 07/06/26
+1630208,Nick Richards,MIA,C,28.0,6,Signed on 08/27/26
+1641796,Pelle Larsson,MIA,G,25.0,2,Draft Rights Traded from HOU on 06/27/24
+203501,Tim Hardaway Jr.,MIA,G,34.0,13,Signed on 07/06/26
+1630696,Dru Smith,MIA,G,28.0,4,Signed on 07/01/23
+1628389,Bam Adebayo,MIA,C-F,29.0,9,#14 Pick in 2017 Draft
+1642066,Myron Gardner,MIA,F,25.0,1,Signed on 07/24/25
+1642352,Keshad Johnson,MIA,F,25.0,2,Signed on 07/01/24
+202691,Klay Thompson,MIA,G-F,36.0,15,Signed on 08/23/26
+203952,Andrew Wiggins,MIA,F,31.0,12,Traded from GSW on 02/06/25
+1643621,Tre Donaldson,MIA,G,22.0,R,Signed on 07/03/26
+1642884,Vladislav Goldin,MIA,C,25.0,1,Signed on 07/02/25
+1626171,Bobby Portis Jr.,MIA,F,31.0,11,Traded from MIL on 07/06/26
+1630579,Jericho Sims,MIL,C,28.0,5,Traded from NYK on 02/06/25
+1643415,Brayden Burries,MIL,G,21.0,R,#10 Pick in 2026 Draft
+1626167,Myles Turner,MIL,C-F,30.0,11,Signed on 07/06/25
+1629018,Gary Trent Jr.,MIL,G,27.0,8,Signed on 07/20/24
+1642276,Kel'el Ware,MIL,C,22.0,2,Traded from MIA on 07/06/26
+1629639,Tyler Herro,MIL,G,26.0,7,Traded from MIA on 07/06/26
+1627747,Caris LeVert,MIL,G,32.0,10,Traded from DET on 07/08/26
+1631157,Ryan Rollins,MIL,G,24.0,4,Signed on 02/20/24
+1643417,Nate Ament,MIL,F,19.0,R,Draft Rights Traded from MIA on 07/06/26
+1628398,Kyle Kuzma,MIL,F,31.0,9,Traded from WAS on 02/06/25
+1642880,Kam Jones,MIL,G,24.0,1,Signed on 07/05/26
+1631260,AJ Green,MIL,G,27.0,4,Signed on 07/01/22
+1631172,Ousmane Dieng,MIL,F,23.0,4,Traded from CHI on 02/05/26
+1642881,Bogoljub Marković,MIL,F,21.0,R,#47 Pick in 2025 Draft
+1631170,Jaime Jaquez Jr.,MIL,G,25.0,3,Traded from MIA on 07/06/26
+1642857,Kasparas Jakučionis,MIL,G,20.0,1,Traded from MIA on 07/06/26
+1642504,Cormac Ryan,MIL,G,27.0,1,Signed on 09/10/25
+1631250,Pete Nance,MIL,F,26.0,3,Signed on 02/27/25
+1628978,Donte DiVincenzo,MIN,G,29.0,8,Traded from NYK on 10/02/24
+1630163,LaMelo Ball,MIN,G,25.0,6,Traded from CHA on 07/10/26
+1630183,Jaden McDaniels,MIN,F,26.0,6,Draft Rights Traded from OKC on 11/20/20
+1630545,Terrence Shannon Jr,MIN,G-F,26.0,2,#27 Pick in 2024 Draft
+1630162,Anthony Edwards,MIN,G,25.0,6,#1 Pick in 2020 Draft
+1641740,Jaylen Clark,MIN,G,25.0,2,#53 Pick in 2023 Draft
+1630538,Bones Hyland,MIN,G,26.0,5,Signed on 02/27/25
+1642262,Cody Williams,MIN,F,21.0,2,Traded from UTA on 08/29/26
+1630245,Ayo Dosunmu,MIN,G,26.0,5,Traded from CHI on 02/05/26
+1642389,Zyon Pullin,MIN,G,25.0,2,Signed on 09/28/25
+1642866,Joan Beringer,MIN,F,19.0,1,#17 Pick in 2025 Draft
+1630228,Jonathan Kuminga,MIN,F,24.0,5,Signed on 09/03/26
+203497,Rudy Gobert,MIN,C,34.0,13,Traded from UTA on 07/06/22
+1642912,Isaiah Evans,MIN,F,20.0,R,Draft Rights Traded from BKN on 07/10/26
+1626168,Trey Lyles,MIN,F,30.0,10,Signed on 07/10/26
+1642911,Rocco Zikarsky,MIN,C,20.0,1,Draft Rights Traded from LAL on 07/06/25
+1631169,Josh Minott,BKN,F,23.0,4,Traded from BOS on 02/05/26
+1643414,Mikel Brown Jr.,BKN,G,20.0,R,#6 Pick in 2026 Draft
+1631165,Keon Ellis,BKN,G,26.0,4,Signed on 07/06/26
+1642874,Danny Wolf,BKN,F,22.0,1,#27 Pick in 2025 Draft
+1642962,Drake Powell,BKN,G-F,21.0,1,Draft Rights Traded from ATL on 07/07/25
+1642856,Egor Dëmin,BKN,G,20.0,1,#8 Pick in 2025 Draft
+1643538,Joshua Jefferson,BKN,F,22.0,R,Draft Rights Traded from MIN on 07/10/26
+1642849,Nolan Traore,BKN,G,20.0,1,#19 Pick in 2025 Draft
+1629021,Moritz Wagner,BKN,F-C,29.0,8,Signed on 07/31/26
+1629611,Terance Mann,BKN,G-F,30.0,7,Traded from ATL on 07/07/25
+1641761,Grant Nelson,BKN,F,24.0,1,Signed on 10/15/25
+1629008,Michael Porter Jr.,BKN,F,28.0,7,Traded from DEN on 07/08/25
+1630549,Day'Ron Sharpe,BKN,C,24.0,5,Draft Rights Traded from PHX on 08/06/21
+1641730,Noah Clowney,BKN,F-C,22.0,3,#21 Pick in 2023 Draft
+203944,Julius Randle,BKN,F-C,31.0,12,Traded from MIN on 07/10/26
+1643052,Chaney Johnson,BKN,G-F,24.0,1,Signed on 12/26/25
+1643548,Tyler Bilodeau,BKN,F,22.0,R,#43 Pick in 2026 Draft
+1642879,Ben Saraf,BKN,G,20.0,1,#26 Pick in 2025 Draft
+203083,Andre Drummond,NYK,C,33.0,14,Signed on 07/06/26
+203903,Jordan Clarkson,NYK,G,34.0,12,Signed on 07/07/25
+1630540,Miles McBride,NYK,G,26.0,5,Draft Rights Traded from OKC on 07/30/21
+1628404,Josh Hart,NYK,G,31.0,9,Traded from POR on 02/09/23
+1642359,Pacôme Dadiet,NYK,F,21.0,2,#25 Pick in 2024 Draft
+1630631,Jose Alvarado,NYK,G,28.0,5,Traded from NOP on 02/05/26
+1628384,OG Anunoby,NYK,F-G,29.0,9,Traded from TOR on 12/30/23
+1641755,Kevin McCullar Jr.,NYK,G,25.0,2,Draft Rights Traded from PHX on 06/27/24
+1630164,James Wiseman,NYK,C,25.0,6,Signed on 09/15/26
+1628973,Jalen Brunson,NYK,G,30.0,8,Signed on 07/12/22
+1642278,Tyler Kolek,NYK,G,25.0,2,Draft Rights Traded from POR on 06/27/24
+1643022,Jaden Akins,NYK,G,23.0,R,Signed on 09/15/26
+1628969,Mikal Bridges,NYK,G-F,30.0,8,Traded from BKN on 07/06/24
+1626157,Karl-Anthony Towns,NYK,C-F,30.0,11,Traded from MIN on 10/02/24
+1629013,Landry Shamet,NYK,G,29.0,8,Signed on 09/14/24
+1642885,Mohamed Diawara,NYK,F,21.0,1,Draft Rights Traded from LAC on 06/26/25
+1643589,Tyler Nickel,NYK,F,23.0,R,#47 Pick in 2026 Draft
+1641710,Anthony Black,ORL,G,22.0,3,#6 Pick in 2023 Draft
+1628371,Jonathan Isaac,ORL,F,29.0,9,#6 Pick in 2017 Draft
+1628975,Jevon Carter,ORL,G,31.0,8,Signed on 02/06/26
+1630217,Desmond Bane,ORL,G,28.0,6,Traded from MEM on 06/15/25
+1630591,Jalen Suggs,ORL,G,25.0,5,#5 Pick in 2021 Draft
+1631094,Paolo Banchero,ORL,F,23.0,4,#1 Pick in 2022 Draft
+1631288,Jamal Cain,ORL,F,27.0,4,Signed on 07/25/25
+202696,Nikola Vučević,ORL,C,35.0,15,Signed on 07/01/26
+1642859,Jase Richardson,ORL,G,21.0,1,#25 Pick in 2025 Draft
+1630658,Colin Castleton,ORL,C,26.0,3,Signed on 08/22/25
+1630532,Franz Wagner,ORL,F,25.0,5,#8 Pick in 2021 Draft
+1641783,Tristan da Silva,ORL,F,25.0,2,#18 Pick in 2024 Draft
+1643593,Izaiyah Nelson,ORL,F,23.0,R,Draft Rights Traded from WAS on 06/24/26
+1631457,Alex Morales,ORL,G,28.0,1,Signed on 10/08/22
+1628976,Wendell Carter Jr.,ORL,C-F,27.0,8,Traded from CHI on 03/25/21
+1629048,Goga Bitadze,ORL,C-F,27.0,7,Signed on 02/13/23
+1642869,Noah Penda,ORL,G-F,21.0,1,Draft Rights Traded from BOS on 06/26/25
+1630169,Tyrese Haliburton,IND,G,26.0,6,Traded from SAC on 02/08/22
+1630167,Obi Toppin,IND,F,28.0,6,Traded from NYK on 07/07/23
+1629614,Andrew Nembhard,IND,G-F,26.0,4,#31 Pick in 2022 Draft
+1643552,Braden Smith,IND,G,23.0,R,Draft Rights Traded from CHI on 06/24/26
+1641716,Jarace Walker,IND,F,23.0,3,Draft Rights Traded from WAS on 06/23/23
+204456,T.J. McConnell,IND,G,34.0,11,Signed on 07/29/19
+1626162,Kelly Oubre Jr.,IND,F-G,30.0,11,Signed on 07/07/26
+1642277,Johnny Furphy,IND,G,21.0,2,Draft Rights Traded from SAS on 07/06/24
+1641771,Jalen Slawson,IND,F,27.0,2,Signed on 09/09/25
+1626204,Larry Nance Jr.,IND,F-C,33.0,11,Signed on 07/09/26
+1630174,Aaron Nesmith,IND,G-F,27.0,6,Traded from BOS on 07/09/22
+1641738,Kobe Brown,IND,F,26.0,3,Traded from LAC on 02/05/26
+1641767,Ben Sheppard,IND,G,25.0,3,#26 Pick in 2023 Draft
+1631245,Quenton Jackson,IND,G,28.0,4,Signed on 03/04/24
+1630643,Jay Huff,IND,C,29.0,5,Traded from MEM on 07/06/25
+1627826,Ivica Zubac,IND,C,29.0,10,Traded from LAC on 02/05/26
+1627783,Pascal Siakam,IND,F,32.0,10,Traded from TOR on 01/17/24
+1630178,Tyrese Maxey,PHI,G,25.0,6,#21 Pick in 2020 Draft
+1642889,Labaron Philon Jr.,PHI,G,20.0,R,#22 Pick in 2026 Draft
+203484,Kentavious Caldwell-Pope,PHI,G,33.0,13,Signed on 08/05/26
+1631126,Caleb Love,PHI,G,25.0,1,Signed on 07/05/26
+1629014,Anfernee Simons,PHI,G,27.0,8,Signed on 07/06/26
+1627759,Jaylen Brown,PHI,G-F,29.0,10,Traded from BOS on 07/06/26
+1642348,Justin Edwards,PHI,F,22.0,2,Signed on 07/04/24
+1641712,Rayan Rupert,PHI,G-F,22.0,3,Signed on 07/08/26
+203954,Joel Embiid,PHI,C-F,32.0,10,#3 Pick in 2014 Draft
+2544,LeBron James,PHI,F,41.0,23,Signed on 07/26/26
+1631230,Dominick Barlow,PHI,F,23.0,4,Signed on 07/09/25
+1641737,Adem Bona,PHI,F,23.0,2,#41 Pick in 2024 Draft
+1631133,Jabari Walker,PHI,F,24.0,4,Signed on 07/05/25
+1629731,Dean Wade,PHI,F-C,29.0,7,Signed on 07/06/26
+1630574,Ariel Hukporti,PHI,C,24.0,2,Signed on 07/06/26
+1642845,VJ Edgecombe,PHI,G,21.0,1,#3 Pick in 2025 Draft
+1629605,Tacko Fall,PHI,C,30.0,3,Signed on 09/01/26
+1642346,Ryan Dunn,PHX,F,23.0,2,Draft Rights Traded from DEN on 06/26/24
+1628415,Dillon Brooks,PHX,G-F,30.0,9,Traded from HOU on 07/06/25
+1630224,Jalen Green,PHX,G,24.0,5,Traded from HOU on 07/06/25
+1628379,Luke Kennard,PHX,G,30.0,9,Signed on 07/14/26
+1642863,Khaman Maluach,PHX,C,20.0,1,Draft Rights Traded from HOU on 07/06/25
+1642345,Oso Ighodaro,PHX,F,24.0,2,Draft Rights Traded from NYK on 06/27/24
+1631221,Collin Gillespie,PHX,G,27.0,3,Signed on 07/02/24
+1626164,Devin Booker,PHX,G,29.0,11,#13 Pick in 2015 Draft
+1631123,Jamaree Bouyea,PHX,G,27.0,4,Signed on 11/18/25
+1631166,Drew Timme,PHX,F,26.0,2,Awarded on Waivers on 10/19/26
+1643520,Koa Peat,PHX,F,19.0,R,Draft Rights Traded from DAL on 06/24/26
+1642853,Rasheer Fleming,PHX,F,22.0,1,Draft Rights Traded from MIN on 07/06/25
+1628970,Miles Bridges,PHX,F,28.0,7,Traded from CHA on 07/13/26
+1630692,Jordan Goodwin,PHX,G,28.0,5,Awarded on Waivers on 07/23/25
+1631109,Mark Williams,PHX,C,24.0,4,Traded from CHA on 06/30/25
+1641871,Duop Reath,PHX,C,30.0,3,Signed on 09/25/26
+1630311,Pat Spencer,PHX,G,30.0,3,Signed on 07/03/26
+1643257,Jayson Kent,POR,F,24.0,1,Signed on 03/03/26
+203081,Damian Lillard,POR,G,36.0,14,Signed on 07/19/25
+1630703,Scoot Henderson,POR,G,22.0,3,#3 Pick in 2023 Draft
+1629630,Ja Morant,POR,G,27.0,7,Traded from MEM on 06/29/26
+1642959,Chris Youngblood,POR,G,24.0,1,Signed on 03/03/26
+201950,Jrue Holiday,POR,G,36.0,17,Traded from BOS on 07/07/25
+1630166,Deni Avdija,POR,F,25.0,6,Traded from WAS on 07/06/24
+1642910,John Tonje,POR,G,25.0,1,Signed on 07/24/26
+1630695,Micah Potter,POR,C,28.0,5,Awarded on Waivers on 07/10/26
+1642382,Branden Carlson,POR,C,27.0,2,Signed on 07/01/26
+1642905,Yang Hansen,POR,C,21.0,1,Draft Rights Traded from MEM on 06/25/25
+1631101,Shaedon Sharpe,POR,G,23.0,4,#7 Pick in 2022 Draft
+1642270,Donovan Clingan,POR,C,22.0,2,#7 Pick in 2024 Draft
+1630249,Vít Krejčí,POR,G,26.0,5,Traded from ATL on 02/01/26
+1641739,Toumani Camara,POR,F,26.0,3,Traded from PHX on 09/27/23
+1629057,Robert Williams III,POR,C-F,29.0,8,Traded from BOS on 10/01/23
+1631321,Sidy Cissoko,POR,G,22.0,3,Signed on 02/08/25
+1628370,Malik Monk,SAC,G,28.0,9,Signed on 07/06/22
+1643411,Darius Acuff Jr.,SAC,G,19.0,R,#7 Pick in 2026 Draft
+203897,Zach LaVine,SAC,G,31.0,12,Traded from CHI on 02/03/25
+1630173,Precious Achiuwa,SAC,F,27.0,6,Signed on 11/04/25
+1642363,Nique Clifford,SAC,G,24.0,1,Draft Rights Traded from OKC on 06/25/25
+1627734,Domantas Sabonis,SAC,F-C,30.0,10,Traded from IND on 02/08/22
+1631099,Keegan Murray,SAC,F,26.0,4,#4 Pick in 2022 Draft
+1629631,De'Andre Hunter,SAC,F-G,28.0,7,Traded from CLE on 02/01/26
+1641778,Leaky Black,SAC,F,27.0,2,Signed on 09/25/26
+1642367,Jonathan Mogbo,SAC,F,24.0,2,Signed on 07/02/26
+1627732,Ben Simmons,SAC,G-F,30.0,8,Signed on 09/07/26
+1631342,Daeqwon Plowden,SAC,G-F,28.0,2,Signed on 07/30/25
+1642928,Dylan Cardwell,SAC,C,24.0,1,Signed on 07/02/25
+1642284,Alex Karaban,SAC,F,23.0,R,Draft Rights Traded from CLE on 06/24/26
+1643567,Emanuel Sharp,SAC,G,22.0,R,#45 Pick in 2026 Draft
+1642875,Maxime Raynaud,SAC,C,23.0,1,#42 Pick in 2025 Draft
+1629162,Jordan McLaughlin,SAS,G,30.0,7,Traded from SAC on 02/03/25
+1641705,Victor Wembanyama,SAS,F-C,22.0,3,#1 Pick in 2023 Draft
+1642844,Dylan Harper,SAS,G,20.0,1,#2 Pick in 2025 Draft
+1629640,Keldon Johnson,SAS,F-G,27.0,7,#29 Pick in 2019 Draft
+1628368,De'Aaron Fox,SAS,G,28.0,9,Traded from SAC on 02/03/25
+1642264,Stephon Castle,SAS,G,21.0,2,#4 Pick in 2024 Draft
+1628436,Luke Kornet,SAS,C-F,31.0,9,Signed on 07/07/25
+1643542,Tarris Reed Jr.,SAS,C,23.0,R,Draft Rights Traded from DEN on 06/23/26
+1642868,Carter Bryant,SAS,F,20.0,1,#14 Pick in 2025 Draft
+1643576,Maliq Brown,SAS,F,22.0,R,#44 Pick in 2026 Draft
+1643551,Ja'Kobi Gillespie,SAS,G,22.0,R,#42 Pick in 2026 Draft
+1643519,Jayden Quaintance,SAS,F,19.0,R,#20 Pick in 2026 Draft
+202699,Tobias Harris,SAS,F,34.0,15,Signed on 07/06/26
+1630170,Devin Vassell,SAS,G-F,26.0,6,#11 Pick in 2020 Draft
+1642357,David Jones Garcia,SAS,G,24.0,1,Signed on 07/23/25
+1630577,Julian Champagnie,SAS,F,25.0,4,
+203084,Harrison Barnes,SAS,F,34.0,14,Traded from SAC on 07/08/24
+1628983,Shai Gilgeous-Alexander,OKC,G,28.0,8,Traded from LAC on 07/10/19
+1642272,Jared McCain,OKC,G,22.0,2,Traded from PHI on 02/04/26
+1631119,Jaylin Williams,OKC,F,24.0,4,#34 Pick in 2022 Draft
+1631096,Chet Holmgren,OKC,C-F,24.0,3,#2 Pick in 2022 Draft
+1631114,Jalen Williams,OKC,G-F,25.0,4,#12 Pick in 2022 Draft
+1627936,Alex Caruso,OKC,G,32.0,9,Traded from CHI on 06/21/24
+1642850,Thomas Sorber,OKC,C,20.0,R,#15 Pick in 2025 Draft
+1642923,Otega Oweh,OKC,G,23.0,R,Draft Rights Traded from MIA on 06/24/26
+1642892,Bennett Stirtz,OKC,G,23.0,R,Draft Rights Traded from MEM on 06/23/26
+1643530,Aday Mara,OKC,C,21.0,R,#12 Pick in 2026 Draft
+1643717,Josh Dix,OKC,G,22.0,R,Signed on 07/03/26
+1641717,Cason Wallace,OKC,G,22.0,3,Draft Rights Traded from DAL on 07/06/23
+1642964,Brooks Barnhizer,OKC,G,24.0,1,#44 Pick in 2025 Draft
+1642349,Ajay Mitchell,OKC,G,24.0,2,Draft Rights Traded from NYK on 06/27/24
+1629026,Kenrich Williams,OKC,G-F,31.0,8,Traded from NOP on 11/23/20
+1642260,Nikola Topić,OKC,G,21.0,1,#12 Pick in 2024 Draft
+1628392,Isaiah Hartenstein,OKC,C-F,28.0,8,Signed on 07/06/24
+1642927,Nate Bittle,TOR,C,23.0,R,Signed on 07/09/26
+1642347,Jamal Shead,TOR,G,24.0,2,Draft Rights Traded from SAC on 06/28/24
+202695,Kawhi Leonard,TOR,F,35.0,15,Traded from LAC on 09/14/26
+1630567,Scottie Barnes,TOR,F-G,25.0,5,#4 Pick in 2021 Draft
+1630193,Immanuel Quickley,TOR,G,27.0,6,Traded from NYK on 12/30/23
+1643558,Jaden Bradley,TOR,G,23.0,R,#50 Pick in 2026 Draft
+1629628,RJ Barrett,TOR,F-G,26.0,7,Traded from NYK on 12/30/23
+203937,Kyle Anderson,TOR,F-G,33.0,12,Signed on 07/06/26
+1642266,Ja'Kobe Walter,TOR,G,22.0,2,#19 Pick in 2024 Draft
+1641869,Malachi Smith,TOR,G,26.0,1,Signed on 08/17/26
+1627751,Jakob Poeltl,TOR,C,31.0,10,Traded from SAS on 02/09/23
+1643512,Allen Graves,TOR,F,20.0,R,#19 Pick in 2026 Draft
+1642867,Collin Murray-Boyles,TOR,F,21.0,1,#9 Pick in 2025 Draft
+1631218,Trayce Jackson-Davis,TOR,F,26.0,3,Traded from GSW on 02/05/26
+1642918,Alijah Martin,TOR,G,24.0,1,#39 Pick in 2025 Draft
+1642419,Jamison Battle,TOR,F,25.0,2,Signed on 07/16/24
+1631127,Harrison Ingram,UTA,F,23.0,2,Signed on 07/25/26
+1642271,Kyle Filipowski,UTA,C,22.0,2,#32 Pick in 2024 Draft
+1641718,Keyonte George,UTA,G,22.0,3,#16 Pick in 2023 Draft
+1630182,Josh Green,UTA,G,25.0,6,Traded from MIN on 08/29/26
+1642268,Isaiah Collier,UTA,G,22.0,2,#29 Pick in 2024 Draft
+1629004,Svi Mykhailiuk,UTA,G-F,29.0,8,Signed on 08/10/24
+1629637,Jaxson Hayes,UTA,C-F,26.0,7,Signed on 07/09/26
+1628396,Tony Bradley,UTA,C-F,28.0,8,Awarded on Waivers on 10/17/26
+1641725,Trey Alexander,UTA,G,23.0,2,Signed on 07/07/26
+1642846,Ace Bailey,UTA,F,20.0,1,#5 Pick in 2025 Draft
+1628991,Jaren Jackson Jr.,UTA,F-C,27.0,8,Traded from MEM on 02/03/26
+1629006,Josh Okogie,UTA,G,28.0,8,Signed on 07/09/26
+1643408,Darryn Peterson,UTA,G,19.0,R,#2 Pick in 2026 Draft
+1628374,Lauri Markkanen,UTA,F-C,29.0,9,Traded from CLE on 09/03/22
+1641729,Brice Sensabaugh,UTA,F,22.0,3,#28 Pick in 2023 Draft
+203994,Jusuf Nurkić,UTA,C,32.0,12,Traded from CHA on 06/29/25
+1628964,Mo Bamba,UTA,C,28.0,8,Signed on 02/26/26
+1642377,Jaylen Wells,MEM,F,23.0,2,#39 Pick in 2024 Draft
+1630590,Scotty Pippen Jr.,MEM,G,25.0,4,Signed on 01/16/24
+1629660,Ty Jerome,MEM,G-F,29.0,7,Signed on 07/14/25
+203924,Jerami Grant,MEM,F,32.0,12,Traded from POR on 06/29/26
+1642914,Javon Small,MEM,G,23.0,1,#48 Pick in 2025 Draft
+1641744,Zach Edey,MEM,C,24.0,2,#9 Pick in 2024 Draft
+1631200,Kris Murray,MEM,F,26.0,3,Traded from POR on 06/29/26
+1641765,Olivier-Maxence Prosper,MEM,F,24.0,3,Signed on 09/04/25
+1643721,Carson Cooper,MEM,F,22.0,R,Signed on 09/28/26
+1642942,Jahmai Mashack,MEM,G,23.0,1,Draft Rights Traded from GSW on 07/06/25
+1641707,Taylor Hendricks,MEM,F,22.0,3,Traded from UTA on 02/03/26
+1642907,Cedric Coward,MEM,G,23.0,1,Draft Rights Traded from POR on 06/25/25
+1642285,Cam Spencer,MEM,G,26.0,2,Draft Rights Traded from DET on 07/06/24
+1643409,Cameron Boozer,MEM,F,19.0,R,#3 Pick in 2026 Draft
+1630191,Isaiah Stewart,MEM,F-C,25.0,6,Traded from DET on 07/08/26
+1643510,Karim López,MEM,F,19.0,R,Draft Rights Traded from DET on 06/24/26
+1642366,Quinten Post,MEM,C,26.0,2,Signed on 07/08/26
+1641713,GG Jackson,MEM,F,21.0,3,#45 Pick in 2023 Draft
+1641731,Bilal Coulibaly,WAS,G,22.0,3,Draft Rights Traded from IND on 06/23/23
+1641774,Tristan Vukčević,WAS,F,23.0,3,#42 Pick in 2023 Draft
+1630544,Tre Mann,WAS,G,25.0,5,Traded from CHA on 08/20/26
+1629027,Trae Young,WAS,G,28.0,8,Traded from ATL on 01/09/26
+1643407,AJ Dybantsa,WAS,F,19.0,R,#1 Pick in 2026 Draft
+1642364,Jamir Watkins,WAS,F,25.0,1,#43 Pick in 2025 Draft
+1642267,Bub Carrington,WAS,G,21.0,2,Draft Rights Traded from POR on 07/06/24
+1629028,Deandre Ayton,WAS,C,28.0,8,Traded from LAL on 07/07/26
+1630551,Justin Champagnie,WAS,G-F,25.0,5,Signed on 02/22/24
+1642848,Tre Johnson,WAS,G,20.0,1,#6 Pick in 2025 Draft
+1630264,Anthony Gill,WAS,F,34.0,6,Signed on 11/30/20
+1642273,Kyshawn George,WAS,F,22.0,2,Draft Rights Traded from NYK on 06/26/24
+1642259,Alex Sarr,WAS,C,21.0,2,#2 Pick in 2024 Draft
+203114,Khris Middleton,WAS,F,35.0,14,Traded from DAL on 07/08/26
+203076,Anthony Davis,WAS,F-C,33.0,14,Traded from DAL on 02/05/26
+1641736,Reece Beekman,WAS,G,25.0,1,Signed on 09/27/26
+1642860,Will Riley,WAS,F,20.0,1,Draft Rights Traded from UTA on 06/25/25
+1643590,Felix Okpara,WAS,C,22.0,R,Draft Rights Traded from ORL on 06/24/26
+1631105,Jalen Duren,DET,C,22.0,4,Draft Rights Traded from NYK on 07/06/22
+1630595,Cade Cunningham,DET,G,25.0,5,#1 Pick in 2021 Draft
+1641842,Ronald Holland II,DET,F,21.0,2,#5 Pick in 2024 Draft
+1630194,Paul Reed,DET,F,27.0,6,Awarded on Waivers on 07/09/24
+1642404,Chaz Lanier,DET,G,24.0,1,#37 Pick in 2025 Draft
+1641709,Ausar Thompson,DET,G-F,23.0,3,#5 Pick in 2023 Draft
+1627752,Taurean Prince,DET,F,32.0,10,Traded from MIL on 07/08/26
+1642403,Isaac Jones,DET,F,26.0,2,Awarded on Waivers on 11/06/25
+1630198,Isaiah Joe,DET,G,27.0,6,Traded from OKC on 07/06/26
+1628381,John Collins,DET,F-C,29.0,9,Traded from LAC on 07/08/26
+1643536,Ebuka Okorie,DET,G,19.0,R,Draft Rights Traded from MEM on 06/24/26
+1642450,Daniss Jenkins,DET,G,25.0,2,Signed on 07/06/24
+1628989,Kevin Huerter,DET,G-F,28.0,8,Traded from CHI on 02/03/26
+1629750,Javonte Green,DET,G,33.0,7,Signed on 08/14/25
+1642391,Ugonna Onyenso,DET,C,22.0,R,Draft Rights Traded from NYK on 06/24/26
+1642449,Tolu Smith,DET,F,26.0,2,Signed on 09/17/24
+1629130,Duncan Robinson,DET,F,32.0,8,Traded from MIA on 07/07/25
+1641989,Elijah Harkless,DET,G,26.0,2,Signed on 07/08/26
+1642369,Michael Ajayi,CHA,G,23.0,R,Signed on 07/06/26
+1643573,Kylan Boswell,CHA,G,21.0,R,Signed on 07/06/26
+1626220,Royce O'Neale,CHA,F,33.0,9,Traded from PHX on 07/13/26
+1629675,Naz Reid,CHA,C-F,27.0,7,Traded from MIN on 07/10/26
+1629684,Grant Williams,CHA,F,27.0,7,Traded from DAL on 02/08/24
+1629632,Coby White,CHA,G,26.0,7,Traded from CHI on 02/04/26
+1642883,Sion James,CHA,G,23.0,1,#33 Pick in 2025 Draft
+1643515,Christian Anderson,CHA,G,20.0,R,#18 Pick in 2026 Draft
+1642851,Kon Knueppel,CHA,G-F,21.0,1,#4 Pick in 2025 Draft
+1628960,Grayson Allen,CHA,G,31.0,8,Traded from PHX on 07/13/26
+1641750,Ryan Kalkbrenner,CHA,C,24.0,1,#34 Pick in 2025 Draft
+1631217,Moussa Diabaté,CHA,F,24.0,4,Signed on 07/31/24
+1641790,PJ Hall,CHA,C,24.0,2,Signed on 12/24/25
+203471,Dennis Schröder,CHA,G,33.0,13,Traded from CLE on 08/20/26
+1643419,Hannes Steinbach,CHA,F,20.0,R,#14 Pick in 2026 Draft
+1641706,Brandon Miller,CHA,F,23.0,3,#2 Pick in 2023 Draft
+1642275,Tidjane Salaün,CHA,F,21.0,2,#6 Pick in 2024 Draft
+1642862,Liam McNeeley,CHA,F,21.0,1,Draft Rights Traded from PHX on 06/30/25

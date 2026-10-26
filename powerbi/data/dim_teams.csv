@@ -1,0 +1,31 @@
+team_id,team_name,conference,division,logo_url,primary_color,secondary_color
+ATL,Atlanta Hawks,East,Southeast,https://cdn.nba.com/logos/nba/1610612737/global/L/logo.svg,#E03A3E,#C1D32F
+BOS,Boston Celtics,East,Atlantic,https://cdn.nba.com/logos/nba/1610612738/global/L/logo.svg,#007A33,#BA9653
+BKN,Brooklyn Nets,East,Atlantic,https://cdn.nba.com/logos/nba/1610612751/global/L/logo.svg,#000000,#FFFFFF
+CHA,Charlotte Hornets,East,Southeast,https://cdn.nba.com/logos/nba/1610612766/global/L/logo.svg,#1D1160,#00788C
+CHI,Chicago Bulls,East,Central,https://cdn.nba.com/logos/nba/1610612741/global/L/logo.svg,#CE1141,#000000
+CLE,Cleveland Cavaliers,East,Central,https://cdn.nba.com/logos/nba/1610612739/global/L/logo.svg,#860038,#041E42
+DAL,Dallas Mavericks,West,Southwest,https://cdn.nba.com/logos/nba/1610612742/global/L/logo.svg,#00538C,#002B5E
+DEN,Denver Nuggets,West,Northwest,https://cdn.nba.com/logos/nba/1610612743/global/L/logo.svg,#0E2240,#FEC524
+DET,Detroit Pistons,East,Central,https://cdn.nba.com/logos/nba/1610612765/global/L/logo.svg,#C8102E,#1D42BA
+GSW,Golden State Warriors,West,Pacific,https://cdn.nba.com/logos/nba/1610612744/global/L/logo.svg,#1D428A,#FFC72C
+HOU,Houston Rockets,West,Southwest,https://cdn.nba.com/logos/nba/1610612745/global/L/logo.svg,#CE1141,#000000
+IND,Indiana Pacers,East,Central,https://cdn.nba.com/logos/nba/1610612754/global/L/logo.svg,#002D62,#FDBB30
+LAC,LA Clippers,West,Pacific,https://cdn.nba.com/logos/nba/1610612746/global/L/logo.svg,#C8102E,#1D428A
+LAL,Los Angeles Lakers,West,Pacific,https://cdn.nba.com/logos/nba/1610612747/global/L/logo.svg,#552583,#FDB927
+MEM,Memphis Grizzlies,West,Southwest,https://cdn.nba.com/logos/nba/1610612763/global/L/logo.svg,#5D76A9,#12173F
+MIA,Miami Heat,East,Southeast,https://cdn.nba.com/logos/nba/1610612748/global/L/logo.svg,#98002E,#F9A01B
+MIL,Milwaukee Bucks,East,Central,https://cdn.nba.com/logos/nba/1610612749/global/L/logo.svg,#00471B,#EEE1C6
+MIN,Minnesota Timberwolves,West,Northwest,https://cdn.nba.com/logos/nba/1610612750/global/L/logo.svg,#0C2340,#236192
+NOP,New Orleans Pelicans,West,Southwest,https://cdn.nba.com/logos/nba/1610612740/global/L/logo.svg,#0C2340,#C8102E
+NYK,New York Knicks,East,Atlantic,https://cdn.nba.com/logos/nba/1610612752/global/L/logo.svg,#006BB6,#F58426
+OKC,Oklahoma City Thunder,West,Northwest,https://cdn.nba.com/logos/nba/1610612760/global/L/logo.svg,#007AC1,#EF3B24
+ORL,Orlando Magic,East,Southeast,https://cdn.nba.com/logos/nba/1610612753/global/L/logo.svg,#0077C0,#C4CED4
+PHI,Philadelphia 76ers,East,Atlantic,https://cdn.nba.com/logos/nba/1610612755/global/L/logo.svg,#006BB6,#ED174C
+PHX,Phoenix Suns,West,Pacific,https://cdn.nba.com/logos/nba/1610612756/global/L/logo.svg,#1D1160,#E56020
+POR,Portland Trail Blazers,West,Northwest,https://cdn.nba.com/logos/nba/1610612757/global/L/logo.svg,#E03A3E,#000000
+SAC,Sacramento Kings,West,Pacific,https://cdn.nba.com/logos/nba/1610612758/global/L/logo.svg,#5A2D81,#63727A
+SAS,San Antonio Spurs,West,Southwest,https://cdn.nba.com/logos/nba/1610612759/global/L/logo.svg,#C4CED4,#000000
+TOR,Toronto Raptors,East,Atlantic,https://cdn.nba.com/logos/nba/1610612761/global/L/logo.svg,#CE1141,#000000
+UTA,Utah Jazz,West,Northwest,https://cdn.nba.com/logos/nba/1610612762/global/L/logo.svg,#002B5C,#00471B
+WAS,Washington Wizards,East,Southeast,https://cdn.nba.com/logos/nba/1610612764/global/L/logo.svg,#002B5C,#E31837
