@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - notebooks/01_data_extraction.ipynb
+    - notebooks/02_feature_engineering.ipynb
+    - notebooks/03_model_training.ipynb
+    - notebooks/04_monte_carlo_sim.ipynb
+    - notebooks/05_conclusions_and_reflections.ipynb
+
+website:
+  title: "2026-27 NBA Championship Predictor"
+  page-navigation: true
+  page-footer:
+    left: "Copyright © 2026, Lian Luigi Paredes"
+    right: "Built with Quarto"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - text: "Abstract"
+        file: index.qmd
+      - text: "01. Data Extraction & Integrity"
+        file: notebooks/01_data_extraction.ipynb
+      - text: "02. Feature Engineering & Valuation"
+        file: notebooks/02_feature_engineering.ipynb
+      - text: "03. Machine Learning Win Models"
+        file: notebooks/03_model_training.ipynb
+      - text: "04. Monte Carlo Playoff Simulation"
+        file: notebooks/04_monte_carlo_sim.ipynb
+      - text: "05. Conclusions & Reflections"
+        file: notebooks/05_conclusions_and_reflections.ipynb
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    theme: darkly
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    code-fold: true

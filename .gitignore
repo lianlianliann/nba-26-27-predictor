@@ -1,0 +1,27 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Environment variables & secrets
+.env
+.env.*
+
+# OS & editor metadata
+.DS_Store
+Thumbs.db
+
+
+/.quarto/
+**/*.quarto_ipynb
+
+/.quarto_cache/
