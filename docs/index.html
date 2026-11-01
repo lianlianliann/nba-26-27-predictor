@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lian Luigi Paredes">
+<meta name="dcterms.date" content="2026-11-01">
+
+<title>2026-27 NBA Championship Predictor</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./notebooks/01_data_extraction.html" rel="next">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-15ddf74ed619b8ba7e9638d721df4c22.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Abstract</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">2026-27 NBA Championship Predictor</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Abstract</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/01_data_extraction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01. Data Extraction &amp; Integrity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/02_feature_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02. Feature Engineering &amp; Valuation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/03_model_training.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03. Machine Learning Win Models</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/04_monte_carlo_sim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04. Monte Carlo Playoff Simulation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notebooks/05_conclusions_and_reflections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">05. Conclusions &amp; Reflections</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#executive-summary-final-verdict" id="toc-executive-summary-final-verdict" class="nav-link" data-scroll-target="#executive-summary-final-verdict">Executive Summary &amp; Final Verdict</a>
+  <ul class="collapse">
+  <li><a href="#top-10-contender-projections" id="toc-top-10-contender-projections" class="nav-link" data-scroll-target="#top-10-contender-projections">Top 10 Contender Projections</a></li>
+  </ul></li>
+  <li><a href="#power-bi-executive-analytics-suite" id="toc-power-bi-executive-analytics-suite" class="nav-link" data-scroll-target="#power-bi-executive-analytics-suite">Power BI Executive Analytics Suite</a>
+  <ul class="collapse">
+  <li><a href="#page-1-championship-overview-title-shares" id="toc-page-1-championship-overview-title-shares" class="nav-link" data-scroll-target="#page-1-championship-overview-title-shares">Page 1: Championship Overview &amp; Title Shares</a></li>
+  <li><a href="#page-2-matchups-win-distributions-postseason-seeds" id="toc-page-2-matchups-win-distributions-postseason-seeds" class="nav-link" data-scroll-target="#page-2-matchups-win-distributions-postseason-seeds">Page 2: Matchups, Win Distributions &amp; Postseason Seeds</a></li>
+  </ul></li>
+  <li><a href="#acknowledgements-data-sources" id="toc-acknowledgements-data-sources" class="nav-link" data-scroll-target="#acknowledgements-data-sources">Acknowledgements &amp; Data Sources</a></li>
+  <li><a href="#tools-tech-stack" id="toc-tools-tech-stack" class="nav-link" data-scroll-target="#tools-tech-stack">Tools &amp; Tech Stack</a></li>
+  <li><a href="#predictive-modeling-results" id="toc-predictive-modeling-results" class="nav-link" data-scroll-target="#predictive-modeling-results">Predictive Modeling Results</a></li>
+  <li><a href="#pipeline-architecture-chapters" id="toc-pipeline-architecture-chapters" class="nav-link" data-scroll-target="#pipeline-architecture-chapters">Pipeline Architecture &amp; Chapters</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">2026-27 NBA Championship Predictor</h1>
+<p class="subtitle lead">An End-to-End Predictive Machine Learning Pipeline &amp; 10,000-Season Monte Carlo Simulation</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Lian Luigi Paredes </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 1, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>This project delivers an end-to-end sports analytics, machine learning, and simulation pipeline that forecasts the regular season standings, postseason seedings, and championship outcomes for the <strong>2026-27 NBA season</strong>.</p>
+<p>Rather than relying on raw box scores or subjective power rankings, this prediction engine is built on an exhaustive nine-layer feature engineering architecture that translates player-level telemetry, contextual fatigue, and team efficiency into causal win probabilities:</p>
+<ol type="1">
+<li><strong>Dean Oliver’s Four Factors:</strong> Quantifying the fundamental pillars of basketball efficiency for both offense and defense—Effective Field Goal Percentage (<code>eFG%</code>), Turnover Rate (<code>TOV%</code>), Offensive Rebounding Percentage (<code>OREB%</code>), and Free Throw Rate (<code>FTR</code>).</li>
+<li><strong>Pace-Adjusted Advanced Ratings:</strong> Normalizing scoring efficiency across differing game speeds to compute true Offensive Rating (<code>ORTG</code>), Defensive Rating (<code>DRTG</code>), and Net Rating (<code>NET_RATING = ORTG - DRTG</code>).</li>
+<li><strong>Causal Rolling Pre-Game Form:</strong> Calculating strictly backwards-looking 10-game rolling efficiency metrics and differential advantages (<code>DIFF_ROLL_NET_RATING</code>, <code>DIFF_ROLL_EFG</code>, etc.) knowable <em>prior</em> to tip-off, fully eliminating circular look-ahead data leakage.</li>
+<li><strong>Contextual Schedule Fatigue &amp; Rest:</strong> Modeling rest days, back-to-back flags (<code>B2B</code>), and rest differentials (<code>REST_DIFF = Home Rest - Away Rest</code>) to capture physical fatigue.</li>
+<li><strong>Bayesian VORP Shrinkage:</strong> Applying empirical Bayes shrinkage (<span class="math inline">\(K = 8.0\)</span>, replacement level <span class="math inline">\(3.90\)</span>) across multi-season player Value Over Replacement Player (VORP) metrics to stabilize small-sample variance while preserving generational superstar impact.</li>
+<li><strong>Rookie Draft-Slot Prior Imputation:</strong> Solving the historical “rookie valuation dilemma” by calibrating historical draft-slot priors (Top-3 Picks: <code>6.60</code>, Lottery 4–14: <code>4.84</code>, Non-Lottery 1st Round: <code>2.80</code>, 2nd Round / Undrafted: <code>1.50</code>) so high-impact rookies are neither ignored nor artificially zeroed out.</li>
+<li><strong>Rotation-Weighted Roster Aggregation:</strong> Filtering each 15-man roster down to the core top-9 rotation players by minutes and value (<code>TOTAL_ROSTER_VALUE</code>), capturing the postseason reality that bench depth matters far less than playoff rotation strength.</li>
+<li><strong>Playoff Experience &amp; Resilience:</strong> Quantifying roster-wide cumulative career playoff games played (<code>TOTAL_PLAYOFF_EXPERIENCE</code>) to capture crunch-time poise and championship battle-testing.</li>
+<li><strong>Calibrated Modern Synergy Power Score:</strong> Unifying team strength through a balanced 40/50/10 formula: 40% historical franchise rolling efficiency, 50% Bayesian active rotation value, and 10% playoff pedigree.</li>
+</ol>
+<p>These engineered features train a well-calibrated machine learning win classifier, which feeds into a <strong>10,000-season Monte Carlo simulation engine</strong> simulating all 1,230 regular season games, the official NBA Play-In Tournament, and complete Best-of-7 playoff series to forecast the 2027 NBA Champion.</p>
+<hr>
+</section>
+<section id="executive-summary-final-verdict" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary-final-verdict">Executive Summary &amp; Final Verdict</h2>
+<p>Across 10,000 fully simulated seasons and playoffs, the <strong>Denver Nuggets</strong> emerge as the projected <strong>2026-27 NBA Champion</strong> with a <strong>31.2% title probability</strong>, anchored by the league’s highest individual rotation valuation and Nikola Jokić’s sustained peak.</p>
+<p>The <strong>New York Knicks</strong> lead the Eastern Conference with a <strong>20.6% championship probability</strong>, setting up <strong>NYK vs.&nbsp;DEN (17.7%)</strong> as the single most frequent simulated NBA Finals pairing.</p>
+<section id="top-10-contender-projections" class="level3">
+<h3 class="anchored" data-anchor-id="top-10-contender-projections">Top 10 Contender Projections</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Team</th>
+<th style="text-align: center;">Conf</th>
+<th style="text-align: center;">Projected Wins</th>
+<th style="text-align: center;">Playoff Prob</th>
+<th style="text-align: center;">Conf Finals Prob</th>
+<th style="text-align: center;">Finals Prob</th>
+<th style="text-align: center;">Championship Prob</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Denver Nuggets (DEN)</strong></td>
+<td style="text-align: center;">West</td>
+<td style="text-align: center;"><strong>58.1</strong></td>
+<td style="text-align: center;">99.98%</td>
+<td style="text-align: center;">64.7%</td>
+<td style="text-align: center;">45.5%</td>
+<td style="text-align: center;"><strong>31.2%</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>New York Knicks (NYK)</strong></td>
+<td style="text-align: center;">East</td>
+<td style="text-align: center;"><strong>55.4</strong></td>
+<td style="text-align: center;">99.91%</td>
+<td style="text-align: center;">58.3%</td>
+<td style="text-align: center;">38.4%</td>
+<td style="text-align: center;"><strong>20.6%</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Philadelphia 76ers (PHI)</strong></td>
+<td style="text-align: center;">East</td>
+<td style="text-align: center;"><strong>53.5</strong></td>
+<td style="text-align: center;">99.61%</td>
+<td style="text-align: center;">51.8%</td>
+<td style="text-align: center;">29.5%</td>
+<td style="text-align: center;"><strong>14.4%</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Oklahoma City Thunder (OKC)</strong></td>
+<td style="text-align: center;">West</td>
+<td style="text-align: center;"><strong>53.9</strong></td>
+<td style="text-align: center;">99.67%</td>
+<td style="text-align: center;">45.1%</td>
+<td style="text-align: center;">22.3%</td>
+<td style="text-align: center;"><strong>12.2%</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>San Antonio Spurs (SAS)</strong></td>
+<td style="text-align: center;">West</td>
+<td style="text-align: center;"><strong>50.0</strong></td>
+<td style="text-align: center;">97.35%</td>
+<td style="text-align: center;">26.5%</td>
+<td style="text-align: center;">11.1%</td>
+<td style="text-align: center;"><strong>4.8%</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Houston Rockets (HOU)</strong></td>
+<td style="text-align: center;">West</td>
+<td style="text-align: center;"><strong>49.3</strong></td>
+<td style="text-align: center;">96.89%</td>
+<td style="text-align: center;">25.0%</td>
+<td style="text-align: center;">9.9%</td>
+<td style="text-align: center;"><strong>4.4%</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Cleveland Cavaliers (CLE)</strong></td>
+<td style="text-align: center;">East</td>
+<td style="text-align: center;"><strong>49.1</strong></td>
+<td style="text-align: center;">96.41%</td>
+<td style="text-align: center;">26.6%</td>
+<td style="text-align: center;">11.9%</td>
+<td style="text-align: center;"><strong>3.9%</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Minnesota Timberwolves (MIN)</strong></td>
+<td style="text-align: center;">West</td>
+<td style="text-align: center;"><strong>46.8</strong></td>
+<td style="text-align: center;">90.07%</td>
+<td style="text-align: center;">14.1%</td>
+<td style="text-align: center;">4.6%</td>
+<td style="text-align: center;"><strong>1.7%</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Boston Celtics (BOS)</strong></td>
+<td style="text-align: center;">East</td>
+<td style="text-align: center;"><strong>45.6</strong></td>
+<td style="text-align: center;">85.82%</td>
+<td style="text-align: center;">14.9%</td>
+<td style="text-align: center;">5.6%</td>
+<td style="text-align: center;"><strong>1.7%</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Orlando Magic (ORL)</strong></td>
+<td style="text-align: center;">East</td>
+<td style="text-align: center;"><strong>45.7</strong></td>
+<td style="text-align: center;">86.29%</td>
+<td style="text-align: center;">14.5%</td>
+<td style="text-align: center;">4.7%</td>
+<td style="text-align: center;"><strong>1.3%</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="power-bi-executive-analytics-suite" class="level2">
+<h2 class="anchored" data-anchor-id="power-bi-executive-analytics-suite">Power BI Executive Analytics Suite</h2>
+<p>The simulation telemetry and data model were compiled into a publication-grade, dark-themed Microsoft Power BI dashboard inspired by official NBA.com analytics portals.</p>
+<section id="page-1-championship-overview-title-shares" class="level3">
+<h3 class="anchored" data-anchor-id="page-1-championship-overview-title-shares">Page 1: Championship Overview &amp; Title Shares</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/dashboard_page1_overview.png" class="img-fluid figure-img"></p>
+<figcaption>Power BI Page 1: Overview &amp; Championship Probabilities</figcaption>
+</figure>
+</div>
+</section>
+<section id="page-2-matchups-win-distributions-postseason-seeds" class="level3">
+<h3 class="anchored" data-anchor-id="page-2-matchups-win-distributions-postseason-seeds">Page 2: Matchups, Win Distributions &amp; Postseason Seeds</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/dashboard_page2_matchups.png" class="img-fluid figure-img"></p>
+<figcaption>Power BI Page 2: Matchups &amp; Postseason Simulation</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+</section>
+<section id="acknowledgements-data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements-data-sources">Acknowledgements &amp; Data Sources</h2>
+<ul>
+<li><strong>NBA Official Stats API (<code>stats.nba.com</code> via <code>nba_api</code>):</strong> 2,460 regular season game logs (2024–25 and 2025–26 seasons) and complete postseason player box scores.</li>
+<li><strong>Basketball-Reference:</strong> Historical playoff series outcomes, franchise win totals, and award voting data.</li>
+<li><strong>NBA Transactions &amp; Opening Week Rosters (October 2026):</strong> Active 15-man rosters, depth charts, age, experience, and trade movements.</li>
+</ul>
+<hr>
+</section>
+<section id="tools-tech-stack" class="level2">
+<h2 class="anchored" data-anchor-id="tools-tech-stack">Tools &amp; Tech Stack</h2>
+<ul>
+<li><strong>Python (Pandas, NumPy, SciPy):</strong> Ingestion, feature pipelines, rolling window efficiency calculations, and Monte Carlo engines.</li>
+<li><strong>Scikit-Learn &amp; LightGBM:</strong> Pre-game win classification, chronological time-series splitting, calibration curves, and ROC-AUC validation.</li>
+<li><strong>Power BI Desktop &amp; DAX:</strong> Star-schema dimensional modeling (<code>dim_teams</code>, <code>fact_team_projections</code>, <code>fact_finals_matchups</code>, <code>fact_win_distribution</code>, <code>fact_seed_distribution</code>), conditional formatting heatmaps, and executive KPI cards.</li>
+<li><strong>Quarto &amp; GitHub Pages:</strong> Reproducible technical publication, dark mode styling, and public web hosting.</li>
+</ul>
+<hr>
+</section>
+<section id="predictive-modeling-results" class="level2">
+<h2 class="anchored" data-anchor-id="predictive-modeling-results">Predictive Modeling Results</h2>
+<p>To prevent look-ahead bias, game features were computed strictly from historical pre-game performance (rolling 10-game efficiency metrics, rest advantage, and Bayesian roster valuation). Models were evaluated on an out-of-sample chronological test set:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Model</th>
+<th style="text-align: center;">Accuracy</th>
+<th style="text-align: center;">ROC-AUC</th>
+<th style="text-align: left;">Engineering Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Logistic Regression (Baseline)</strong></td>
+<td style="text-align: center;"><strong>66.99%</strong></td>
+<td style="text-align: center;"><strong>0.7324</strong></td>
+<td style="text-align: left;"><strong>Best calibrated model.</strong> Avoided overfitting, aligned with true NBA home/away margins, and produced optimal probabilities for simulation.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Random Forest Classifier</strong></td>
+<td style="text-align: center;">66.42%</td>
+<td style="text-align: center;">0.7251</td>
+<td style="text-align: left;">Strong non-linear interaction capture; slightly less calibrated on high-probability favorites.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>XGBoost Classifier</strong></td>
+<td style="text-align: center;">62.60%</td>
+<td style="text-align: center;">0.6731</td>
+<td style="text-align: left;">Tendency to overfit on noise in small rolling game windows without aggressive regularization.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="pipeline-architecture-chapters" class="level2">
+<h2 class="anchored" data-anchor-id="pipeline-architecture-chapters">Pipeline Architecture &amp; Chapters</h2>
+<p>Explore the full methodology and code across the five project chapters:</p>
+<ol type="1">
+<li><a href="./notebooks/01_data_extraction.html"><strong>01. Data Extraction &amp; Integrity</strong></a>: Raw box score ingestion, feature extraction, missing value auditing, and data sanity checks.</li>
+<li><a href="./notebooks/02_feature_engineering.html"><strong>02. Feature Engineering &amp; Valuation</strong></a>: Dean Oliver Four Factors, pace adjustments, Bayesian player shrinkage (<span class="math inline">\(K=8.0\)</span>, replacement level <span class="math inline">\(3.90\)</span>), and rookie draft-slot priors.</li>
+<li><a href="./notebooks/03_model_training.html"><strong>03. Machine Learning Win Models</strong></a>: Rolling window causal features, chronological train/test splitting, ROC-AUC benchmarking, and feature importance analysis.</li>
+<li><a href="./notebooks/04_monte_carlo_sim.html"><strong>04. Monte Carlo Playoff Simulation</strong></a>: 10,000 full-season simulations, tiebreakers, Play-In tournament brackets, and Best-of-7 series mechanics.</li>
+<li><a href="./notebooks/05_conclusions_and_reflections.html"><strong>05. Conclusions &amp; Reflections</strong></a>: Engineering post-mortems, look-ahead leakage traps, superstar weighting discoveries, and domain retrospectives.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./notebooks/01_data_extraction.html" class="pagination-link" aria-label="01. Data Extraction &amp; Integrity">
+        <span class="nav-page-text">01. Data Extraction &amp; Integrity</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright © 2026, Lian Luigi Paredes</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with Quarto</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

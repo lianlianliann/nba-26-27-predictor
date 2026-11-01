@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Part 5: Project Conclusions &amp; Reflections: The Journey of Building an NBA Predictor – 2026-27 NBA Championship Predictor</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../notebooks/04_monte_carlo_sim.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-15ddf74ed619b8ba7e9638d721df4c22.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notebooks/05_conclusions_and_reflections.html">05. Conclusions &amp; Reflections</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">2026-27 NBA Championship Predictor</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Abstract</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/01_data_extraction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">01. Data Extraction &amp; Integrity</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/02_feature_engineering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">02. Feature Engineering &amp; Valuation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/03_model_training.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">03. Machine Learning Win Models</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/04_monte_carlo_sim.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">04. Monte Carlo Playoff Simulation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/05_conclusions_and_reflections.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">05. Conclusions &amp; Reflections</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#project-conclusion-final-verdict" id="toc-project-conclusion-final-verdict" class="nav-link active" data-scroll-target="#project-conclusion-final-verdict">🏆 Project Conclusion &amp; Final Verdict</a>
+  <ul class="collapse">
+  <li><a href="#the-2026-27-championship-contender-hierarchy" id="toc-the-2026-27-championship-contender-hierarchy" class="nav-link" data-scroll-target="#the-2026-27-championship-contender-hierarchy">The 2026-27 Championship Contender Hierarchy</a></li>
+  </ul></li>
+  <li><a href="#the-inspiration-adapting-a-tournament-concept-to-the-82-game-nba-grind" id="toc-the-inspiration-adapting-a-tournament-concept-to-the-82-game-nba-grind" class="nav-link" data-scroll-target="#the-inspiration-adapting-a-tournament-concept-to-the-82-game-nba-grind">1. The Inspiration: Adapting a Tournament Concept to the 82-Game NBA Grind</a></li>
+  <li><a href="#the-reality-check-how-real-nba-analytics-teams-do-it-vs.-what-we-built" id="toc-the-reality-check-how-real-nba-analytics-teams-do-it-vs.-what-we-built" class="nav-link" data-scroll-target="#the-reality-check-how-real-nba-analytics-teams-do-it-vs.-what-we-built">2. The Reality Check: How Real NBA Analytics Teams Do It vs.&nbsp;What We Built</a></li>
+  <li><a href="#the-big-engineering-challenges-post-mortems" id="toc-the-big-engineering-challenges-post-mortems" class="nav-link" data-scroll-target="#the-big-engineering-challenges-post-mortems">3. The Big Engineering Challenges &amp; Post-Mortems</a>
+  <ul class="collapse">
+  <li><a href="#challenge-1-the-rookie-dilemma-how-do-you-value-players-with-zero-nba-minutes" id="toc-challenge-1-the-rookie-dilemma-how-do-you-value-players-with-zero-nba-minutes" class="nav-link" data-scroll-target="#challenge-1-the-rookie-dilemma-how-do-you-value-players-with-zero-nba-minutes">Challenge 1: The Rookie Dilemma (How do you value players with zero NBA minutes?)</a></li>
+  <li><a href="#challenge-2-the-rotation-reality-why-15-man-rosters-mislead" id="toc-challenge-2-the-rotation-reality-why-15-man-rosters-mislead" class="nav-link" data-scroll-target="#challenge-2-the-rotation-reality-why-15-man-rosters-mislead">Challenge 2: The Rotation Reality (Why 15-man rosters mislead)</a></li>
+  <li><a href="#challenge-3-why-we-neutralized-home-court-advantage-in-future-simulations" id="toc-challenge-3-why-we-neutralized-home-court-advantage-in-future-simulations" class="nav-link" data-scroll-target="#challenge-3-why-we-neutralized-home-court-advantage-in-future-simulations">Challenge 3: Why We Neutralized Home-Court Advantage in Future Simulations</a></li>
+  <li><a href="#challenge-4-the-look-ahead-leakage-trap-the-85-accuracy-illusion" id="toc-challenge-4-the-look-ahead-leakage-trap-the-85-accuracy-illusion" class="nav-link" data-scroll-target="#challenge-4-the-look-ahead-leakage-trap-the-85-accuracy-illusion">Challenge 4: The Look-Ahead Leakage Trap (The 85% Accuracy Illusion)</a></li>
+  <li><a href="#challenge-5-the-superstar-flattening-trap-empirical-bayesian-shrinkage" id="toc-challenge-5-the-superstar-flattening-trap-empirical-bayesian-shrinkage" class="nav-link" data-scroll-target="#challenge-5-the-superstar-flattening-trap-empirical-bayesian-shrinkage">Challenge 5: The Superstar Flattening Trap &amp; Empirical Bayesian Shrinkage</a></li>
+  </ul></li>
+  <li><a href="#model-evolution-the-2025-26-out-of-sample-backtest" id="toc-model-evolution-the-2025-26-out-of-sample-backtest" class="nav-link" data-scroll-target="#model-evolution-the-2025-26-out-of-sample-backtest">4. Model Evolution: The 2025-26 Out-of-Sample Backtest</a></li>
+  <li><a href="#what-math-cannot-see-the-human-reality-of-basketball" id="toc-what-math-cannot-see-the-human-reality-of-basketball" class="nav-link" data-scroll-target="#what-math-cannot-see-the-human-reality-of-basketball">5. What Math Cannot See: The Human Reality of Basketball</a></li>
+  <li><a href="#final-reflections-key-lessons-learned" id="toc-final-reflections-key-lessons-learned" class="nav-link" data-scroll-target="#final-reflections-key-lessons-learned">6. Final Reflections &amp; Key Lessons Learned</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Part 5: Project Conclusions &amp; Reflections: The Journey of Building an NBA Predictor</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<hr>
+<section id="project-conclusion-final-verdict" class="level2">
+<h2 class="anchored" data-anchor-id="project-conclusion-final-verdict">🏆 Project Conclusion &amp; Final Verdict</h2>
+<p>If the 2026-27 NBA season were played 10,000 times, who wins the Larry O’Brien Championship Trophy?</p>
+<p>Based on our multi-stage machine learning and Monte Carlo simulation pipeline—combining 10-feature pre-game team efficiency, rotation-level player valuation with Bayesian shrinkage, and active roster playoff experience—here is our official prediction verdict:</p>
+<section id="the-2026-27-championship-contender-hierarchy" class="level3">
+<h3 class="anchored" data-anchor-id="the-2026-27-championship-contender-hierarchy">The 2026-27 Championship Contender Hierarchy</h3>
+<ol type="1">
+<li><p><strong>Denver Nuggets (<code>DEN</code> — 31.2% Championship Probability):</strong><br>
+The overall title favorite. Projected for <strong>58.1 regular-season wins</strong> and a <strong>45.5% chance of reaching the Finals</strong>. Denver pairs the league’s highest individual player rating (Nikola Jokić) with elite multi-year net rating stability.</p></li>
+<li><p><strong>New York Knicks (<code>NYK</code> — 20.6% Championship Probability):</strong><br>
+The class of the Eastern Conference. Projected for <strong>55.4 regular-season wins</strong> and a <strong>38.4% Finals appearance rate</strong>. A deep, veteran top-9 rotation backed by 323 cumulative playoff games gives New York a smoother path to the Finals than Western contenders.</p></li>
+<li><p><strong>Philadelphia 76ers (<code>PHI</code> — 14.4% Championship Probability):</strong><br>
+High-end ceiling. Projected for <strong>53.5 wins</strong> and a <strong>29.5% Finals appearance rate</strong>, led by elite starter efficiency.</p></li>
+<li><p><strong>Oklahoma City Thunder (<code>OKC</code> — 12.2% Championship Probability):</strong><br>
+Elite young contender. Projected for <strong>53.9 regular-season wins</strong> and 324 playoff games of experience. Their title odds are tempered primarily by the brutal Western Conference playoff gauntlet alongside Denver.</p></li>
+<li><p><strong>The Second-Tier Contenders:</strong><br>
+<strong>San Antonio Spurs</strong> (4.8% title odds, 50.0 wins), <strong>Houston Rockets</strong> (4.4% title odds, 49.3 wins), and <strong>Cleveland Cavaliers</strong> (3.9% title odds, 47.9 wins).</p></li>
+</ol>
+<p>The remaining 23 NBA teams share a combined 8.5% chance of winning the championship, illustrating how heavily NBA titles concentrate among top-tier rotations.</p>
+<div id="1407e46c" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-10-26T12:13:41.986078Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-10-26T12:13:41.985813Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-10-26T12:13:42.796274Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-10-26T12:13:42.795362Z&quot;}}" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Project paths</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>PROJECT_ROOT <span class="op">=</span> Path.cwd().parent <span class="cf">if</span> Path.cwd().name <span class="op">==</span> <span class="st">"notebooks"</span> <span class="cf">else</span> Path.cwd()</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>PROJECTIONS_FILE <span class="op">=</span> PROJECT_ROOT <span class="op">/</span> <span class="st">"outputs"</span> <span class="op">/</span> <span class="st">"season_projections_26_27.csv"</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Styling configuration for clean, publication-ready visuals</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'seaborn-v0_8-whitegrid'</span> <span class="cf">if</span> <span class="st">'seaborn-v0_8-whitegrid'</span> <span class="kw">in</span> plt.style.available <span class="cf">else</span> <span class="st">'default'</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'font.sans-serif'</span>] <span class="op">=</span> <span class="st">'DejaVu Sans'</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'figure.dpi'</span>] <span class="op">=</span> <span class="dv">150</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Setup completed successfully. Project root:"</span>, PROJECT_ROOT)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Setup completed successfully. Project root: D:\Data Science Projects\nba-26-27-predictor</code></pre>
+</div>
+</div>
+<div id="697262f7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-10-26T12:13:42.800606Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-10-26T12:13:42.800107Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-10-26T12:13:42.820938Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-10-26T12:13:42.820301Z&quot;}}" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load official 2026-27 Monte Carlo season projections</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df_proj <span class="op">=</span> pd.read_csv(PROJECTIONS_FILE)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>team_names <span class="op">=</span> {</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'DEN'</span>: <span class="st">'Denver Nuggets'</span>, <span class="st">'NYK'</span>: <span class="st">'New York Knicks'</span>, <span class="st">'PHI'</span>: <span class="st">'Philadelphia 76ers'</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'OKC'</span>: <span class="st">'Oklahoma City Thunder'</span>, <span class="st">'SAS'</span>: <span class="st">'San Antonio Spurs'</span>, <span class="st">'HOU'</span>: <span class="st">'Houston Rockets'</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'CLE'</span>: <span class="st">'Cleveland Cavaliers'</span>, <span class="st">'MIN'</span>: <span class="st">'Minnesota Timberwolves'</span>, <span class="st">'ORL'</span>: <span class="st">'Orlando Magic'</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'BOS'</span>: <span class="st">'Boston Celtics'</span>, <span class="st">'POR'</span>: <span class="st">'Portland Trail Blazers'</span>, <span class="st">'LAL'</span>: <span class="st">'Los Angeles Lakers'</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ATL'</span>: <span class="st">'Atlanta Hawks'</span>, <span class="st">'IND'</span>: <span class="st">'Indiana Pacers'</span>, <span class="st">'TOR'</span>: <span class="st">'Toronto Raptors'</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'MIA'</span>: <span class="st">'Miami Heat'</span>, <span class="st">'NOP'</span>: <span class="st">'New Orleans Pelicans'</span>, <span class="st">'LAC'</span>: <span class="st">'LA Clippers'</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'GSW'</span>: <span class="st">'Golden State Warriors'</span>, <span class="st">'MEM'</span>: <span class="st">'Memphis Grizzlies'</span>, <span class="st">'MIL'</span>: <span class="st">'Milwaukee Bucks'</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'DAL'</span>: <span class="st">'Dallas Mavericks'</span>, <span class="st">'SAC'</span>: <span class="st">'Sacramento Kings'</span>, <span class="st">'PHX'</span>: <span class="st">'Phoenix Suns'</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'DET'</span>: <span class="st">'Detroit Pistons'</span>, <span class="st">'CHI'</span>: <span class="st">'Chicago Bulls'</span>, <span class="st">'UTA'</span>: <span class="st">'Utah Jazz'</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'CHA'</span>: <span class="st">'Charlotte Hornets'</span>, <span class="st">'WAS'</span>: <span class="st">'Washington Wizards'</span>, <span class="st">'BKN'</span>: <span class="st">'Brooklyn Nets'</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>df_proj[<span class="st">'TEAM_NAME'</span>] <span class="op">=</span> df_proj[<span class="st">'TEAM'</span>].<span class="bu">map</span>(team_names).fillna(df_proj[<span class="st">'TEAM'</span>])</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the Top 10 Contenders ranked by Championship Probability</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>cols_display <span class="op">=</span> [</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">'TEAM'</span>, <span class="st">'TEAM_NAME'</span>, <span class="st">'CONF'</span>, </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">'PROJ_WINS'</span>, <span class="st">'PLAYOFF_PROB'</span>, <span class="st">'CONF_FINALS_PROB'</span>, <span class="st">'FINALS_PROB'</span>, <span class="st">'CHAMPIONSHIP_PROB'</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>top10 <span class="op">=</span> df_proj[cols_display].head(<span class="dv">10</span>).copy()</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>top10[<span class="st">'PROJ_WINS'</span>] <span class="op">=</span> top10[<span class="st">'PROJ_WINS'</span>].<span class="bu">map</span>(<span class="kw">lambda</span> x: <span class="ss">f"</span><span class="sc">{</span>x<span class="sc">:.1f}</span><span class="ss">"</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>top10[<span class="st">'PLAYOFF_PROB'</span>] <span class="op">=</span> top10[<span class="st">'PLAYOFF_PROB'</span>].<span class="bu">map</span>(<span class="kw">lambda</span> x: <span class="ss">f"</span><span class="sc">{</span>x<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>top10[<span class="st">'CONF_FINALS_PROB'</span>] <span class="op">=</span> top10[<span class="st">'CONF_FINALS_PROB'</span>].<span class="bu">map</span>(<span class="kw">lambda</span> x: <span class="ss">f"</span><span class="sc">{</span>x<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>top10[<span class="st">'FINALS_PROB'</span>] <span class="op">=</span> top10[<span class="st">'FINALS_PROB'</span>].<span class="bu">map</span>(<span class="kw">lambda</span> x: <span class="ss">f"</span><span class="sc">{</span>x<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>top10[<span class="st">'CHAMPIONSHIP_PROB'</span>] <span class="op">=</span> top10[<span class="st">'CHAMPIONSHIP_PROB'</span>].<span class="bu">map</span>(<span class="kw">lambda</span> x: <span class="ss">f"</span><span class="sc">{</span>x<span class="op">*</span><span class="dv">100</span><span class="sc">:.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>top10.rename(columns<span class="op">=</span>{</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">'TEAM'</span>: <span class="st">'Team'</span>,</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">'TEAM_NAME'</span>: <span class="st">'Franchise'</span>,</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">'CONF'</span>: <span class="st">'Conf'</span>,</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">'PROJ_WINS'</span>: <span class="st">'Proj Wins'</span>,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">'PLAYOFF_PROB'</span>: <span class="st">'Playoffs %'</span>,</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">'CONF_FINALS_PROB'</span>: <span class="st">'Conf Finals %'</span>,</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="st">'FINALS_PROB'</span>: <span class="st">'Finals %'</span>,</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">'CHAMPIONSHIP_PROB'</span>: <span class="st">'Title %'</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>top10.reset_index(drop<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>top10.index <span class="op">=</span> top10.index <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>top10</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Team</th>
+<th data-quarto-table-cell-role="th">Franchise</th>
+<th data-quarto-table-cell-role="th">Conf</th>
+<th data-quarto-table-cell-role="th">Proj Wins</th>
+<th data-quarto-table-cell-role="th">Playoffs %</th>
+<th data-quarto-table-cell-role="th">Conf Finals %</th>
+<th data-quarto-table-cell-role="th">Finals %</th>
+<th data-quarto-table-cell-role="th">Title %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1</th>
+<td>DEN</td>
+<td>Denver Nuggets</td>
+<td>West</td>
+<td>58.1</td>
+<td>100.0%</td>
+<td>64.7%</td>
+<td>45.5%</td>
+<td>31.2%</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2</th>
+<td>NYK</td>
+<td>New York Knicks</td>
+<td>East</td>
+<td>55.4</td>
+<td>99.9%</td>
+<td>58.3%</td>
+<td>38.4%</td>
+<td>20.6%</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">3</th>
+<td>PHI</td>
+<td>Philadelphia 76ers</td>
+<td>East</td>
+<td>53.5</td>
+<td>99.6%</td>
+<td>51.8%</td>
+<td>29.5%</td>
+<td>14.4%</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4</th>
+<td>OKC</td>
+<td>Oklahoma City Thunder</td>
+<td>West</td>
+<td>53.9</td>
+<td>99.7%</td>
+<td>45.1%</td>
+<td>22.3%</td>
+<td>12.2%</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">5</th>
+<td>SAS</td>
+<td>San Antonio Spurs</td>
+<td>West</td>
+<td>50.0</td>
+<td>97.4%</td>
+<td>26.5%</td>
+<td>11.1%</td>
+<td>4.8%</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">6</th>
+<td>HOU</td>
+<td>Houston Rockets</td>
+<td>West</td>
+<td>49.3</td>
+<td>96.9%</td>
+<td>25.0%</td>
+<td>9.9%</td>
+<td>4.4%</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">7</th>
+<td>CLE</td>
+<td>Cleveland Cavaliers</td>
+<td>East</td>
+<td>49.1</td>
+<td>96.4%</td>
+<td>26.6%</td>
+<td>11.9%</td>
+<td>3.9%</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">8</th>
+<td>MIN</td>
+<td>Minnesota Timberwolves</td>
+<td>West</td>
+<td>46.8</td>
+<td>90.1%</td>
+<td>14.1%</td>
+<td>4.6%</td>
+<td>1.7%</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">9</th>
+<td>BOS</td>
+<td>Boston Celtics</td>
+<td>East</td>
+<td>45.6</td>
+<td>85.8%</td>
+<td>14.9%</td>
+<td>5.6%</td>
+<td>1.7%</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">10</th>
+<td>ORL</td>
+<td>Orlando Magic</td>
+<td>East</td>
+<td>45.7</td>
+<td>86.3%</td>
+<td>14.5%</td>
+<td>4.7%</td>
+<td>1.3%</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="4687d923" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-10-26T12:13:42.822421Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-10-26T12:13:42.822267Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-10-26T12:13:43.014282Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-10-26T12:13:43.013220Z&quot;}}" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizing Top 10 Championship Probabilities (Inspired by modern sports analytics dashboards)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="fl">5.5</span>))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>top10_plot <span class="op">=</span> df_proj.head(<span class="dv">10</span>).sort_values(<span class="st">'CHAMPIONSHIP_PROB'</span>, ascending<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>teams <span class="op">=</span> top10_plot[<span class="st">'TEAM'</span>]</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>probs <span class="op">=</span> top10_plot[<span class="st">'CHAMPIONSHIP_PROB'</span>] <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'#1d70b8'</span> <span class="cf">if</span> c <span class="op">==</span> <span class="st">'East'</span> <span class="cf">else</span> <span class="st">'#d9381e'</span> <span class="cf">for</span> c <span class="kw">in</span> top10_plot[<span class="st">'CONF'</span>]]</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>bars <span class="op">=</span> plt.barh(teams, probs, color<span class="op">=</span>colors, height<span class="op">=</span><span class="fl">0.65</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>, alpha<span class="op">=</span><span class="fl">0.9</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> bar <span class="kw">in</span> bars:</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    width <span class="op">=</span> bar.get_width()</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    plt.text(width <span class="op">+</span> <span class="fl">0.6</span>, bar.get_y() <span class="op">+</span> bar.get_height()<span class="op">/</span><span class="dv">2</span>, <span class="ss">f"</span><span class="sc">{</span>width<span class="sc">:.1f}</span><span class="ss">%"</span>, </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>             va<span class="op">=</span><span class="st">'center'</span>, ha<span class="op">=</span><span class="st">'left'</span>, fontsize<span class="op">=</span><span class="dv">10</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, color<span class="op">=</span><span class="st">'#222222'</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">36</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"2026-27 NBA Championship Win Probability (10,000 Monte Carlo Simulations)"</span>, </span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>          fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, pad<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Simulated Championship Probability (%)"</span>, fontsize<span class="op">=</span><span class="dv">11</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, labelpad<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Team"</span>, fontsize<span class="op">=</span><span class="dv">11</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Patch</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>legend_elements <span class="op">=</span> [</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    Patch(facecolor<span class="op">=</span><span class="st">'#1d70b8'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, label<span class="op">=</span><span class="st">'Eastern Conference'</span>),</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    Patch(facecolor<span class="op">=</span><span class="st">'#d9381e'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, label<span class="op">=</span><span class="st">'Western Conference'</span>)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>plt.legend(handles<span class="op">=</span>legend_elements, loc<span class="op">=</span><span class="st">'lower right'</span>, frameon<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05_conclusions_and_reflections_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="the-inspiration-adapting-a-tournament-concept-to-the-82-game-nba-grind" class="level2">
+<h2 class="anchored" data-anchor-id="the-inspiration-adapting-a-tournament-concept-to-the-82-game-nba-grind">1. The Inspiration: Adapting a Tournament Concept to the 82-Game NBA Grind</h2>
+<p>This project was sparked by an executive sports prediction dashboard that circulated on LinkedIn during the FIFA World Cup - combining match outcome classifiers, Monte Carlo bracket simulations, and a sleek Power BI analytics portal.</p>
+<p>Adapting that concept to professional basketball, however, required engineering an entirely different architecture. Unlike a 64-match international soccer tournament with static four-year rosters, the NBA is an 82-game, 1,230-game endurance marathon characterized by rapid summer roster turnover, in-season blockbuster trades, back-to-back schedule fatigue, and multi-game playoff series where rotation depth dictates championship viability.</p>
+</section>
+<section id="the-reality-check-how-real-nba-analytics-teams-do-it-vs.-what-we-built" class="level2">
+<h2 class="anchored" data-anchor-id="the-reality-check-how-real-nba-analytics-teams-do-it-vs.-what-we-built">2. The Reality Check: How Real NBA Analytics Teams Do It vs.&nbsp;What We Built</h2>
+<p>Throughout this project, one central question kept coming up:<br>
+<em>How do real NBA front offices, Vegas sportsbooks, and elite media outlets (like ESPN or FiveThirtyEight) actually make these predictions?</em></p>
+<p>Understanding that contrast gave us a deep appreciation for the trade-offs in sports analytics:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Real NBA Front Offices &amp; Elite Media</th>
+<th style="text-align: left;">Our Independent Data Science Pipeline</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Data Sources</strong></td>
+<td style="text-align: left;">Second Spectrum optical tracking cameras (25 frame-per-second x/y/z coordinates of all 10 players and the ball), wearable biometric monitors, private injury records.</td>
+<td style="text-align: left;">Public NBA API box scores, play-by-play game logs, and official team rosters.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Player Impact</strong></td>
+<td style="text-align: left;">Proprietary spatial tracking metrics (Catch-and-Shoot QSQ, defensive contest distance, offensive rim gravity).</td>
+<td style="text-align: left;">John Hollinger’s Game Score (<code>GmSc</code>) scaled by playing time, adjusted for replacement level, and smoothed using Empirical Bayesian Shrinkage.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Roster Modeling</strong></td>
+<td style="text-align: left;">Lineup-level possession models tracking 5-man net ratings for hundreds of rotation combinations.</td>
+<td style="text-align: left;">Top-9 rotation player aggregation—capturing over 90% of meaningful playing time during the regular season and playoffs.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Compute &amp; Staff</strong></td>
+<td style="text-align: left;">Multi-million dollar cloud clusters and full departments of data engineers and quantitative analysts.</td>
+<td style="text-align: left;">A modular, reproducible Python pipeline running in Jupyter notebooks on a single laptop.</td>
+</tr>
+</tbody>
+</table>
+<p>Despite using public data, we discovered that grounding our features in basketball fundamentals—<strong>Dean Oliver’s Four Factors</strong>, <strong>pace-adjusted Net Rating</strong>, and <strong>Bayesian-shrunk player values</strong>—allowed our models to match the real-world predictive benchmarks achieved by commercial sports forecasting systems.</p>
+</section>
+<section id="the-big-engineering-challenges-post-mortems" class="level2">
+<h2 class="anchored" data-anchor-id="the-big-engineering-challenges-post-mortems">3. The Big Engineering Challenges &amp; Post-Mortems</h2>
+<p>Building this pipeline was not a straight line. Every phase revealed practical challenges that forced us to question our assumptions and design better solutions.</p>
+<hr>
+<section id="challenge-1-the-rookie-dilemma-how-do-you-value-players-with-zero-nba-minutes" class="level3">
+<h3 class="anchored" data-anchor-id="challenge-1-the-rookie-dilemma-how-do-you-value-players-with-zero-nba-minutes">Challenge 1: The Rookie Dilemma (How do you value players with zero NBA minutes?)</h3>
+<ul>
+<li><strong>The Problem:</strong> In standard machine learning pipelines, missing data is filled with zeroes. But if an incoming rookie has zero prior NBA games, giving them a value of <code>0.0</code> treats them as worse than an end-of-bench replacement player. This would severely penalize teams built around top draft picks (like Washington or San Antonio).</li>
+<li><strong>How Real Models Solve It:</strong> Sports analytics systems use college/overseas scouting numbers, athletic testing, or historical draft-position curves.</li>
+<li><strong>Our Solution:</strong> We looked at actual rookie-season production across recent NBA draft classes and established empirical draft-slot baselines:
+<ul>
+<li><strong>Picks 1–3:</strong> Value of <strong>6.60</strong> (reflecting immediate high-impact starters like Cooper Flagg, Zaccharie Risacher, or Alex Sarr).</li>
+<li><strong>Picks 4–14 (Lottery):</strong> Value of <strong>4.84</strong> (solid rotation contributors).</li>
+<li><strong>Picks 15–30 (Late 1st Round):</strong> Value of <strong>2.80</strong> (bench contributors).</li>
+<li><strong>Round 2 &amp; Undrafted:</strong> Value of <strong>1.05</strong> (developmental depth).<br>
+This gave incoming rookies a fair starting baseline without artificially inflating their teams.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="challenge-2-the-rotation-reality-why-15-man-rosters-mislead" class="level3">
+<h3 class="anchored" data-anchor-id="challenge-2-the-rotation-reality-why-15-man-rosters-mislead">Challenge 2: The Rotation Reality (Why 15-man rosters mislead)</h3>
+<ul>
+<li><strong>The Problem:</strong> An NBA roster holds 15 full contracts plus two-way players. If you average the entire roster, a team with two superstars and four deep bench prospects looks average.</li>
+<li><strong>The Basketball Insight:</strong> In real NBA games, the 12th through 15th players almost never see the floor in competitive moments. In the playoffs, coaches shorten their rotations to <strong>8 or 9 players</strong>. Starters and primary reserves play over 90% of the game’s total minutes.</li>
+<li><strong>Our Solution:</strong> We ranked every team’s roster by our workload-scaled Game Score and summed the Value Over Replacement Player (VORP) of only the <strong>top 9 rotation players</strong>. This accurately reflected real-game team strength.</li>
+</ul>
+<hr>
+</section>
+<section id="challenge-3-why-we-neutralized-home-court-advantage-in-future-simulations" class="level3">
+<h3 class="anchored" data-anchor-id="challenge-3-why-we-neutralized-home-court-advantage-in-future-simulations">Challenge 3: Why We Neutralized Home-Court Advantage in Future Simulations</h3>
+<ul>
+<li><strong>The Question:</strong> In a single NBA game, home teams win roughly 58% of the time (+2.5 to +3.0 points). Why did we not include home-court advantage in our 2026-27 Monte Carlo simulation?</li>
+<li><strong>The Nuance:</strong> In single-game forecasting, home court is vital. But in an 82-game regular-season projection, every single team plays exactly <strong>41 home games and 41 away games</strong>.</li>
+<li>Over a full 82-game schedule, home-court advantages cancel each other out across the league. Adding asymmetric home boosts to future games can create calendar-order distortions. By using <strong>Bill James’ Log5 formula</strong> on a neutral scale, our simulation evaluates teams strictly on intrinsic roster strength and tactical efficiency.</li>
+</ul>
+<hr>
+</section>
+<section id="challenge-4-the-look-ahead-leakage-trap-the-85-accuracy-illusion" class="level3">
+<h3 class="anchored" data-anchor-id="challenge-4-the-look-ahead-leakage-trap-the-85-accuracy-illusion">Challenge 4: The Look-Ahead Leakage Trap (The 85% Accuracy Illusion)</h3>
+<ul>
+<li><strong>The Trap:</strong> In early experimentation, our models achieved an eye-popping 85%+ accuracy predicting NBA games. It felt like a breakthrough—until we looked under the hood.</li>
+<li><strong>The Flaw:</strong> The model was using full-season averages and end-of-season win percentages. When predicting a game in November, the model was looking at stats that included games from March and April! It was reading tomorrow’s newspaper today.</li>
+<li><strong>The Fix:</strong> We completely eliminated full-season statistics from game prediction. We sorted all games chronologically and computed expanding rolling averages using strictly prior games (<code>shift(1).expanding(min_periods=5)</code>). On game day, Game N only knows what happened in Games 1 through N-1.</li>
+<li><strong>The Result:</strong> Accuracy dropped from an artificial 85% to an honest, realistic <strong>67.0%</strong>. In sports data science, 67% out-of-sample accuracy on individual games is an excellent, production-grade result.</li>
+</ul>
+<hr>
+</section>
+<section id="challenge-5-the-superstar-flattening-trap-empirical-bayesian-shrinkage" class="level3">
+<h3 class="anchored" data-anchor-id="challenge-5-the-superstar-flattening-trap-empirical-bayesian-shrinkage">Challenge 5: The Superstar Flattening Trap &amp; Empirical Bayesian Shrinkage</h3>
+<ul>
+<li><strong>The Problem:</strong> Naive percentile rankings flatten talent. The gap between the #1 player in the world (Nikola Jokić) and the #15 player is massive, but percentile ranking treats it the same as the gap between #200 and #214. Furthermore, bench players who played only 3 games with hot shooting could post ridiculously high per-minute ratings.</li>
+<li><strong>The Solution:</strong> We implemented <strong>Empirical Bayesian Shrinkage</strong>: <span class="math display">\[\text{Shrunk Value} = \frac{\text{GP} \times \text{Raw Value} + K \times \text{Replacement Level}}{\text{GP} + K}\]</span> With shrinkage factor K = 8.0 games and an empirical replacement level of <strong>3.90</strong> (the median rating of NBA 10th-to-14th men), small-sample flukes were safely pulled back to earth, while superstars retained their massive, well-earned advantages.</li>
+</ul>
+</section>
+</section>
+<section id="model-evolution-the-2025-26-out-of-sample-backtest" class="level2">
+<h2 class="anchored" data-anchor-id="model-evolution-the-2025-26-out-of-sample-backtest">4. Model Evolution: The 2025-26 Out-of-Sample Backtest</h2>
+<p>To scientifically prove whether our adjustments actually improved predictions, we conducted a strict out-of-sample backtest. We rewound the clock to the start of the 2025-26 season, trained models solely on 2024-25 data and opening-week 2025 rosters, and predicted the entire 82-game win totals for all 30 teams against actual 2025-26 results:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 29%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Iteration</th>
+<th style="text-align: left;">Core Architecture</th>
+<th style="text-align: center;">Mean Absolute Error (MAE)</th>
+<th style="text-align: left;">Real-World Takeaway</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>V1 Baseline</strong></td>
+<td style="text-align: left;">Naive Percentile Ranks (Flattened talent, no draft priors, arbitrary weights)</td>
+<td style="text-align: center;"><strong>8.77 Wins</strong></td>
+<td style="text-align: left;">Missed superstar impact; overvalued deep benches.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>V2 Pure Roster</strong></td>
+<td style="text-align: left;">Empirical Bayesian Shrinkage (K = 8.0, replacement 3.90, draft priors)</td>
+<td style="text-align: center;"><strong>8.38 Wins</strong></td>
+<td style="text-align: left;">Superstars properly valued; reduced error by ~0.4 wins per team.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Balanced Modern</strong></td>
+<td style="text-align: left;"><strong>40% Historical Efficiency / 50% Rotation Talent / 10% Playoff Experience</strong></td>
+<td style="text-align: center;"><strong>8.27 Wins</strong></td>
+<td style="text-align: left;"><strong>Top Performer.</strong> Blends proven team execution with individual talent.</td>
+</tr>
+</tbody>
+</table>
+<p>Let’s visualize this progression:</p>
+<div id="36df1bdf" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-10-26T12:13:43.016328Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-10-26T12:13:43.016160Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-10-26T12:13:43.108301Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-10-26T12:13:43.107590Z&quot;}}" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizing Backtest MAE Across Pipeline Iterations</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>models <span class="op">=</span> [<span class="st">'V1 Naive Percentiles'</span>, <span class="st">'V2 Pure Roster Shrinkage'</span>, <span class="st">'Balanced Modern (Selected)'</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>mae_values <span class="op">=</span> [<span class="fl">8.77</span>, <span class="fl">8.38</span>, <span class="fl">8.27</span>]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>bars <span class="op">=</span> plt.bar(models, mae_values, color<span class="op">=</span>[<span class="st">'#888888'</span>, <span class="st">'#4a90e2'</span>, <span class="st">'#2ecc71'</span>], width<span class="op">=</span><span class="fl">0.5</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> bar <span class="kw">in</span> bars:</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    yval <span class="op">=</span> bar.get_height()</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    plt.text(bar.get_x() <span class="op">+</span> bar.get_width()<span class="op">/</span><span class="dv">2</span>, yval <span class="op">+</span> <span class="fl">0.15</span>, <span class="ss">f"</span><span class="sc">{</span>yval<span class="sc">:.2f}</span><span class="ss"> Wins"</span>, </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>             ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>, fontsize<span class="op">=</span><span class="dv">10</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="fl">10.5</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Mean Absolute Error (Wins)"</span>, fontsize<span class="op">=</span><span class="dv">11</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"2025-26 Out-of-Sample Backtest: Model Error Across 1,230 Games"</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>, pad<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="05_conclusions_and_reflections_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="what-math-cannot-see-the-human-reality-of-basketball" class="level2">
+<h2 class="anchored" data-anchor-id="what-math-cannot-see-the-human-reality-of-basketball">5. What Math Cannot See: The Human Reality of Basketball</h2>
+<p>As data scientists, it is essential to remain humble about the limits of numbers. No model, no matter how sophisticated, can foresee the unpredictable elements of an 82-game NBA season:</p>
+<ol type="1">
+<li><strong>Catastrophic Injuries:</strong> A single rolled ankle or knee sprain in April can wipe out a 60-win team’s championship hopes in seconds.</li>
+<li><strong>The Trade Deadline Catalyst:</strong> In February, front offices make mid-season trades that completely overhaul rotations (e.g., acquiring a defensive anchor or a secondary scorer).</li>
+<li><strong>Locker Room Chemistry &amp; Coaching Adjustments:</strong> Tactical counters, defensive matchups, and locker room trust cannot be measured purely through box scores.</li>
+<li><strong>Playoff Shooting Variance:</strong> In a 7-game series, an untimely shooting slump from 3-point range can knock out a statistically superior team.</li>
+</ol>
+<p>Monte Carlo simulations do not claim to predict the future with 100% certainty—rather, they calculate the <strong>distribution of possibilities</strong>, allowing us to see which teams have the highest probability of weathering the storm.</p>
+</section>
+<section id="final-reflections-key-lessons-learned" class="level2">
+<h2 class="anchored" data-anchor-id="final-reflections-key-lessons-learned">6. Final Reflections &amp; Key Lessons Learned</h2>
+<p>Building this predictive pipeline from scratch provided invaluable practical lessons in applied sports analytics:</p>
+<ol type="1">
+<li><p><strong>Look-Ahead Leakage is the #1 Trap in Time-Series Machine Learning:</strong><br>
+Always ask: <em>What was knowable at the exact moment before the event occurred?</em> If you use post-game or end-of-season data, your model is not predicting—it is merely summarizing.</p></li>
+<li><p><strong>Domain Knowledge Beats Raw Complexity:</strong><br>
+Standardized Logistic Regression with carefully engineered basketball features (Net Rating, Four Factors, Top-9 VORP) outperformed complex boosted tree ensembles. In basketball, knowing <em>which</em> numbers matter is far more valuable than throwing raw box scores into a black-box model.</p></li>
+<li><p><strong>Statistical Distribution Matters More than Raw Rank:</strong><br>
+Standardizing player metrics into Z-scores and applying Bayesian shrinkage preserved the massive real-world advantage of superstars like Nikola Jokić, preventing them from being artificially compressed into simple percentiles.</p></li>
+<li><p><strong>End-to-End Pipeline Thinking:</strong><br>
+From raw API extraction in Part 1 to clean feature engineering in Part 2, leak-free training in Part 3, Monte Carlo simulations in Part 4, and automated Power BI reporting tables in Part 5, sports data science is at its best when it tells a complete, coherent, and transparent story.</p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../notebooks/04_monte_carlo_sim.html" class="pagination-link" aria-label="04. Monte Carlo Playoff Simulation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">04. Monte Carlo Playoff Simulation</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright © 2026, Lian Luigi Paredes</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with Quarto</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
